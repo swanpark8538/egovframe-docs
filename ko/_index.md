@@ -21,3 +21,5 @@ path : content/ko
 path : content/ko
 
 path : content/ko
+
+path : content/ko
