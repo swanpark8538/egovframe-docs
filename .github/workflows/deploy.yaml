@@ -3,7 +3,7 @@ name: Deploy Hugo site to GitHub Pages
 on:
   push:
     branches:
-      - main  # main 브랜치에 push가 있을 때 트리거
+      - contribution  # contribution 브랜치에 push가 있을 때 트리거
   workflow_dispatch:  # 수동 실행을 위한 트리거
   
 jobs:
@@ -19,14 +19,14 @@ jobs:
         persist-credentials: false  # GitHub 인증 문제 방지
         submodules: true  # 서브모듈도 함께 체크아웃
 
-    # 2. main 브랜치에서 markdown 파일들만 체크아웃
-    - name: Checkout the main branch for markdown files
+    # 2. contribution 브랜치에서 markdown 파일들만 체크아웃
+    - name: Checkout the contribution branch for markdown files
       uses: actions/checkout@v3
       with:
-        ref: main  # main 브랜치에서 파일 가져오기
-        path: main-md  # 임시로 main 브랜치의 markdown 파일을 저장할 위치
+        ref: contribution  # contribution 브랜치에서 파일 가져오기
+        path: contribution-md  # 임시로 contribution 브랜치의 markdown 파일을 저장할 위치
 
-    # 3. main 브랜치의 markdown 파일들을 content 폴더에 복사
+    # 3. contribution 브랜치의 markdown 파일들을 content 폴더에 복사
     - name: Copy markdown files to content
       run: |
         mkdir -p content  # 필요한 디렉토리(content) 생성
