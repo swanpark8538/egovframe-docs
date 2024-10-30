@@ -30,7 +30,7 @@ jobs:
     - name: Copy markdown files to content
       run: |
         mkdir -p content  # 필요한 디렉토리(content) 생성
-        cp -r main-md/. content/  # main-md 폴더 이하의 모든 파일과 하위 디렉토리까지 포함하여 복사
+        cp -r contribution-md/. content/  # main-md 폴더 이하의 모든 파일과 하위 디렉토리까지 포함하여 복사
 
     - name: Install Node.js
       uses: actions/setup-node@v3
