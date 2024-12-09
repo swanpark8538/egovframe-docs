@@ -1,4 +1,4 @@
-baseURL: https://swanpark8538.github.io/egovframe-docs/
+baseURL: https://eGovFramework.github.io/egovframe-docs/
 title: 표준프레임워크 개발가이드
 
 # cSpell:ignore goldmark github hugo readingtime docsy subdir lastmod pygments linenos catmullrom norsk gu
@@ -14,7 +14,7 @@ enableMissingTranslationPlaceholders: true
 languages:
   ko:
     languageName: Korean
-    # contentDir: content/ko
+    # contentDir: content/ko 이미 앞에서 기본 contentDir로 설정해놨음
     title: 표준프레임워크 개발가이드
     params:
       description: 표준프레임워크 가이드 문서
@@ -150,7 +150,7 @@ params:
     # If you want this feature, but occasionally need to remove the "Feedback" section from a single page,
     # add "hide_feedback: true" to the page's front matter.
     feedback:
-      enable: true
+      enable: false
       # The responses that the user sees after clicking "yes" (the page was helpful) or "no" (the page was not helpful).
       'yes': >-
         Glad to hear it! Please <a href="https://github.com/USERNAME/REPOSITORY/issues/new">tell us how we can improve</a>.
