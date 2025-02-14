@@ -223,8 +223,8 @@ h3,h4,h5,h6 {
     mask-repeat: no-repeat;
     mask-position: center center;
     mask-size: contain;
-    -webkit-mask-image: url(../../img/egovframework/ico_issue.svg);
-    mask-image: url(../../img/egovframework/ico_issue.svg);
+    -webkit-mask-image: url(../img/egovframework/ico_issue.svg);
+    mask-image: url(../img/egovframework/ico_issue.svg);
   }
 
   .svg-icon.ico_page_view {
@@ -234,8 +234,8 @@ h3,h4,h5,h6 {
     mask-repeat: no-repeat;
     mask-position: center center;
     mask-size: contain;
-    -webkit-mask-image: url(../../img/egovframework/ico_page_view.svg);
-    mask-image: url(../../img/egovframework/ico_page_view.svg);
+    -webkit-mask-image: url(../img/egovframework/ico_page_view.svg);
+    mask-image: url(../img/egovframework/ico_page_view.svg);
   }
 
   .svg-icon.ico_page_edit {
@@ -245,8 +245,8 @@ h3,h4,h5,h6 {
     mask-repeat: no-repeat;
     mask-position: center center;
     mask-size: contain;
-    -webkit-mask-image: url(../../img/egovframework/ico_page_edit.svg);
-    mask-image: url(../../img/egovframework/ico_page_edit.svg);
+    -webkit-mask-image: url(../img/egovframework/ico_page_edit.svg);
+    mask-image: url(../img/egovframework/ico_page_edit.svg);
   }
 
 /* 페이지 상단으로 이동*/

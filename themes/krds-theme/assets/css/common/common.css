@@ -54,8 +54,8 @@
   mask-repeat: no-repeat;
   mask-position: center center;
   mask-size: contain;
-  -webkit-mask-image: url(../../img/component/icon/ico_angle.svg);
-  mask-image: url(../../img/component/icon/ico_angle.svg);
+  -webkit-mask-image: url(../img/component/icon/ico_angle.svg);
+  mask-image: url(../img/component/icon/ico_angle.svg);
 }
 .svg-icon.ico-angle.disabled {
   -webkit-mask-repeat: no-repeat;
@@ -64,8 +64,8 @@
   mask-repeat: no-repeat;
   mask-position: center center;
   mask-size: contain;
-  -webkit-mask-image: url(../../img/component/icon/ico_angle_disabled.svg);
-  mask-image: url(../../img/component/icon/ico_angle_disabled.svg);
+  -webkit-mask-image: url(../img/component/icon/ico_angle_disabled.svg);
+  mask-image: url(../img/component/icon/ico_angle_disabled.svg);
   -webkit-mask-image: none;
   mask-image: none;
   background-image: url(../../img/component/icon/ico_angle_disabled.svg);
@@ -91,8 +91,8 @@
   mask-repeat: no-repeat;
   mask-position: center center;
   mask-size: contain;
-  -webkit-mask-image: url(../../img/component/icon/ico_sch.svg);
-  mask-image: url(../../img/component/icon/ico_sch.svg);
+  -webkit-mask-image: url(../img/component/icon/ico_sch.svg);
+  mask-image: url(../img/component/icon/ico_sch.svg);
 }
 .svg-icon.ico-upload {
   -webkit-mask-repeat: no-repeat;
@@ -101,8 +101,8 @@
   mask-repeat: no-repeat;
   mask-position: center center;
   mask-size: contain;
-  -webkit-mask-image: url(../../img/component/icon/ico_upload.svg);
-  mask-image: url(../../img/component/icon/ico_upload.svg);
+  -webkit-mask-image: url(../img/component/icon/ico_upload.svg);
+  mask-image: url(../img/component/icon/ico_upload.svg);
 }
 .svg-icon.ico-call {
   -webkit-mask-repeat: no-repeat;
@@ -111,8 +111,8 @@
   mask-repeat: no-repeat;
   mask-position: center center;
   mask-size: contain;
-  -webkit-mask-image: url(../../img/component/icon/ico_call.svg);
-  mask-image: url(../../img/component/icon/ico_call.svg);
+  -webkit-mask-image: url(../img/component/icon/ico_call.svg);
+  mask-image: url(../img/component/icon/ico_call.svg);
 }
 .svg-icon.ico-faq {
   -webkit-mask-repeat: no-repeat;
@@ -121,8 +121,8 @@
   mask-repeat: no-repeat;
   mask-position: center center;
   mask-size: contain;
-  -webkit-mask-image: url(../../img/component/icon/ico_faq.svg);
-  mask-image: url(../../img/component/icon/ico_faq.svg);
+  -webkit-mask-image: url(../img/component/icon/ico_faq.svg);
+  mask-image: url(../img/component/icon/ico_faq.svg);
 }
 .svg-icon.ico-like {
   -webkit-mask-repeat: no-repeat;
@@ -131,8 +131,8 @@
   mask-repeat: no-repeat;
   mask-position: center center;
   mask-size: contain;
-  -webkit-mask-image: url(../../img/component/icon/ico_like.svg);
-  mask-image: url(../../img/component/icon/ico_like.svg);
+  -webkit-mask-image: url(../img/component/icon/ico_like.svg);
+  mask-image: url(../img/component/icon/ico_like.svg);
 }
 .svg-icon.ico-share {
   -webkit-mask-repeat: no-repeat;
@@ -141,8 +141,8 @@
   mask-repeat: no-repeat;
   mask-position: center center;
   mask-size: contain;
-  -webkit-mask-image: url(../../img/component/icon/ico_share.svg);
-  mask-image: url(../../img/component/icon/ico_share.svg);
+  -webkit-mask-image: url(../img/component/icon/ico_share.svg);
+  mask-image: url(../img/component/icon/ico_share.svg);
 }
 .svg-icon.ico-more {
   -webkit-mask-repeat: no-repeat;
@@ -151,8 +151,8 @@
   mask-repeat: no-repeat;
   mask-position: center center;
   mask-size: contain;
-  -webkit-mask-image: url(../../img/component/icon/ico_more.svg);
-  mask-image: url(../../img/component/icon/ico_more.svg);
+  -webkit-mask-image: url(../img/component/icon/ico_more.svg);
+  mask-image: url(../img/component/icon/ico_more.svg);
 }
 .svg-icon.ico-sch-plus {
   -webkit-mask-repeat: no-repeat;
@@ -161,8 +161,8 @@
   mask-repeat: no-repeat;
   mask-position: center center;
   mask-size: contain;
-  -webkit-mask-image: url(../../img/component/icon/ico_sch_plus.svg);
-  mask-image: url(../../img/component/icon/ico_sch_plus.svg);
+  -webkit-mask-image: url(../img/component/icon/ico_sch_plus.svg);
+  mask-image: url(../img/component/icon/ico_sch_plus.svg);
 }
 .svg-icon.ico-go {
   -webkit-mask-repeat: no-repeat;
@@ -171,8 +171,8 @@
   mask-repeat: no-repeat;
   mask-position: center center;
   mask-size: contain;
-  -webkit-mask-image: url(../../img/component/icon/ico_go.svg);
-  mask-image: url(../../img/component/icon/ico_go.svg);
+  -webkit-mask-image: url(../img/component/icon/ico_go.svg);
+  mask-image: url(../img/component/icon/ico_go.svg);
 }
 .svg-icon.ico-down {
   -webkit-mask-repeat: no-repeat;
@@ -181,8 +181,8 @@
   mask-repeat: no-repeat;
   mask-position: center center;
   mask-size: contain;
-  -webkit-mask-image: url(../../img/component/icon/ico_download.svg);
-  mask-image: url(../../img/component/icon/ico_download.svg);
+  -webkit-mask-image: url(../img/component/icon/ico_download.svg);
+  mask-image: url(../img/component/icon/ico_download.svg);
 }
 .svg-icon.ico-filter {
   -webkit-mask-repeat: no-repeat;
@@ -191,8 +191,8 @@
   mask-repeat: no-repeat;
   mask-position: center center;
   mask-size: contain;
-  -webkit-mask-image: url(../../img/component/icon/ico_filter.svg);
-  mask-image: url(../../img/component/icon/ico_filter.svg);
+  -webkit-mask-image: url(../img/component/icon/ico_filter.svg);
+  mask-image: url(../img/component/icon/ico_filter.svg);
 }
 .svg-icon.ico-reset {
   -webkit-mask-repeat: no-repeat;
@@ -201,8 +201,8 @@
   mask-repeat: no-repeat;
   mask-position: center center;
   mask-size: contain;
-  -webkit-mask-image: url(../../img/component/icon/ico_reset.svg);
-  mask-image: url(../../img/component/icon/ico_reset.svg);
+  -webkit-mask-image: url(../img/component/icon/ico_reset.svg);
+  mask-image: url(../img/component/icon/ico_reset.svg);
 }
 .svg-icon.ico-log {
   -webkit-mask-repeat: no-repeat;
@@ -211,8 +211,8 @@
   mask-repeat: no-repeat;
   mask-position: center center;
   mask-size: contain;
-  -webkit-mask-image: url(../../img/component/icon/ico_login.svg);
-  mask-image: url(../../img/component/icon/ico_login.svg);
+  -webkit-mask-image: url(../img/component/icon/ico_login.svg);
+  mask-image: url(../img/component/icon/ico_login.svg);
 }
 .svg-icon.ico-func {
   -webkit-mask-repeat: no-repeat;
@@ -221,8 +221,8 @@
   mask-repeat: no-repeat;
   mask-position: center center;
   mask-size: contain;
-  -webkit-mask-image: url(../../img/component/icon/ico_expand.svg);
-  mask-image: url(../../img/component/icon/ico_expand.svg);
+  -webkit-mask-image: url(../img/component/icon/ico_expand.svg);
+  mask-image: url(../img/component/icon/ico_expand.svg);
 }
 .svg-icon.ico-func.up {
   transform: rotate(-90deg);
@@ -237,8 +237,8 @@
   mask-repeat: no-repeat;
   mask-position: center center;
   mask-size: contain;
-  -webkit-mask-image: url(../../img/component/icon/ico_logout.svg);
-  mask-image: url(../../img/component/icon/ico_logout.svg);
+  -webkit-mask-image: url(../img/component/icon/ico_logout.svg);
+  mask-image: url(../img/component/icon/ico_logout.svg);
 }
 .svg-icon.ico-logout {
   gap: var(--krds-gap-3);
@@ -250,8 +250,8 @@
   mask-repeat: no-repeat;
   mask-position: center center;
   mask-size: contain;
-  -webkit-mask-image: url(../../img/component/icon/ico_email.svg);
-  mask-image: url(../../img/component/icon/ico_email.svg);
+  -webkit-mask-image: url(../img/component/icon/ico_email.svg);
+  mask-image: url(../img/component/icon/ico_email.svg);
 }
 .svg-icon.ico-email {
   gap: var(--krds-gap-3);
@@ -263,8 +263,8 @@
   mask-repeat: no-repeat;
   mask-position: center center;
   mask-size: contain;
-  -webkit-mask-image: url(../../img/component/icon/ico_print.svg);
-  mask-image: url(../../img/component/icon/ico_print.svg);
+  -webkit-mask-image: url(../img/component/icon/ico_print.svg);
+  mask-image: url(../img/component/icon/ico_print.svg);
 }
 .svg-icon.ico-print {
   gap: var(--krds-gap-3);
@@ -276,8 +276,8 @@
   mask-repeat: no-repeat;
   mask-position: center center;
   mask-size: contain;
-  -webkit-mask-image: url(../../img/component/icon/ico_scrap.svg);
-  mask-image: url(../../img/component/icon/ico_scrap.svg);
+  -webkit-mask-image: url(../img/component/icon/ico_scrap.svg);
+  mask-image: url(../img/component/icon/ico_scrap.svg);
 }
 .svg-icon.ico-scrap {
   gap: var(--krds-gap-3);
@@ -289,8 +289,8 @@
   mask-repeat: no-repeat;
   mask-position: center center;
   mask-size: contain;
-  -webkit-mask-image: url(../../img/component/icon/ico_delete.svg);
-  mask-image: url(../../img/component/icon/ico_delete.svg);
+  -webkit-mask-image: url(../img/component/icon/ico_delete.svg);
+  mask-image: url(../img/component/icon/ico_delete.svg);
 }
 .svg-icon.ico-del {
   gap: var(--krds-gap-3);
@@ -302,8 +302,8 @@
   mask-repeat: no-repeat;
   mask-position: center center;
   mask-size: contain;
-  -webkit-mask-image: url(../../img/component/icon/ico_close.svg);
-  mask-image: url(../../img/component/icon/ico_close.svg);
+  -webkit-mask-image: url(../img/component/icon/ico_close.svg);
+  mask-image: url(../img/component/icon/ico_close.svg);
 }
 .svg-icon.ico-delete-fill {
   -webkit-mask-repeat: no-repeat;
@@ -312,8 +312,8 @@
   mask-repeat: no-repeat;
   mask-position: center center;
   mask-size: contain;
-  -webkit-mask-image: url(../../img/component/icon/ico_delete_fill.svg);
-  mask-image: url(../../img/component/icon/ico_delete_fill.svg);
+  -webkit-mask-image: url(../img/component/icon/ico_delete_fill.svg);
+  mask-image: url(../img/component/icon/ico_delete_fill.svg);
   -webkit-mask-image: none;
   mask-image: none;
   background-image: url(../../img/component/icon/ico_delete_fill.svg);
@@ -330,8 +330,8 @@
   mask-repeat: no-repeat;
   mask-position: center center;
   mask-size: contain;
-  -webkit-mask-image: url(../../img/component/icon/ico_plus.svg);
-  mask-image: url(../../img/component/icon/ico_plus.svg);
+  -webkit-mask-image: url(../img/component/icon/ico_plus.svg);
+  mask-image: url(../img/component/icon/ico_plus.svg);
 }
 .svg-icon.ico-plus {
   gap: var(--krds-gap-3);
@@ -343,8 +343,8 @@
   mask-repeat: no-repeat;
   mask-position: center center;
   mask-size: contain;
-  -webkit-mask-image: url(../../img/component/icon/ico_setting.svg);
-  mask-image: url(../../img/component/icon/ico_setting.svg);
+  -webkit-mask-image: url(../img/component/icon/ico_setting.svg);
+  mask-image: url(../img/component/icon/ico_setting.svg);
 }
 .svg-icon.ico-setting {
   gap: var(--krds-gap-3);
@@ -356,8 +356,8 @@
   mask-repeat: no-repeat;
   mask-position: center center;
   mask-size: contain;
-  -webkit-mask-image: url(../../img/component/icon/ico_go.svg);
-  mask-image: url(../../img/component/icon/ico_go.svg);
+  -webkit-mask-image: url(../img/component/icon/ico_go.svg);
+  mask-image: url(../img/component/icon/ico_go.svg);
 }
 .svg-icon.ico-link {
   gap: var(--krds-gap-3);
@@ -369,8 +369,8 @@
   mask-repeat: no-repeat;
   mask-position: center center;
   mask-size: contain;
-  -webkit-mask-image: url(../../img/component/icon/ico_reset.svg);
-  mask-image: url(../../img/component/icon/ico_reset.svg);
+  -webkit-mask-image: url(../img/component/icon/ico_reset.svg);
+  mask-image: url(../img/component/icon/ico_reset.svg);
 }
 .svg-icon.ico-toggle {
   -webkit-mask-repeat: no-repeat;
@@ -379,8 +379,8 @@
   mask-repeat: no-repeat;
   mask-position: center center;
   mask-size: contain;
-  -webkit-mask-image: url(../../img/component/icon/ico_angle.svg);
-  mask-image: url(../../img/component/icon/ico_angle.svg);
+  -webkit-mask-image: url(../img/component/icon/ico_angle.svg);
+  mask-image: url(../img/component/icon/ico_angle.svg);
 }
 .svg-icon.ico-pw-visible {
   -webkit-mask-repeat: no-repeat;
@@ -389,8 +389,8 @@
   mask-repeat: no-repeat;
   mask-position: center center;
   mask-size: contain;
-  -webkit-mask-image: url(../../img/component/icon/ico_pw_visible_off.svg);
-  mask-image: url(../../img/component/icon/ico_pw_visible_off.svg);
+  -webkit-mask-image: url(../img/component/icon/ico_pw_visible_off.svg);
+  mask-image: url(../img/component/icon/ico_pw_visible_off.svg);
 }
 .svg-icon.ico-pw-visible-on {
   -webkit-mask-repeat: no-repeat;
@@ -399,8 +399,8 @@
   mask-repeat: no-repeat;
   mask-position: center center;
   mask-size: contain;
-  -webkit-mask-image: url(../../img/component/icon/ico_pw_visible_on.svg);
-  mask-image: url(../../img/component/icon/ico_pw_visible_on.svg);
+  -webkit-mask-image: url(../img/component/icon/ico_pw_visible_on.svg);
+  mask-image: url(../img/component/icon/ico_pw_visible_on.svg);
 }
 .svg-icon.ico-help {
   -webkit-mask-repeat: no-repeat;
@@ -409,8 +409,8 @@
   mask-repeat: no-repeat;
   mask-position: center center;
   mask-size: contain;
-  -webkit-mask-image: url(../../img/component/icon/ico_help.svg);
-  mask-image: url(../../img/component/icon/ico_help.svg);
+  -webkit-mask-image: url(../img/component/icon/ico_help.svg);
+  mask-image: url(../img/component/icon/ico_help.svg);
   -webkit-mask-image: none;
   mask-image: none;
   background-image: url(../../img/component/icon/ico_help.svg);
@@ -427,8 +427,8 @@
   mask-repeat: no-repeat;
   mask-position: center center;
   mask-size: contain;
-  -webkit-mask-image: url(../../img/component/icon/ico_angle.svg);
-  mask-image: url(../../img/component/icon/ico_angle.svg);
+  -webkit-mask-image: url(../img/component/icon/ico_angle.svg);
+  mask-image: url(../img/component/icon/ico_angle.svg);
   transform: rotate(-90deg);
 }
 .svg-icon.ico-bread-home {
@@ -438,8 +438,8 @@
   mask-repeat: no-repeat;
   mask-position: center center;
   mask-size: contain;
-  -webkit-mask-image: url(../../img/component/icon/ico_bread_home.svg);
-  mask-image: url(../../img/component/icon/ico_bread_home.svg);
+  -webkit-mask-image: url(../img/component/icon/ico_bread_home.svg);
+  mask-image: url(../img/component/icon/ico_bread_home.svg);
 }
 .svg-icon.ico-cal-move {
   -webkit-mask-repeat: no-repeat;
@@ -448,8 +448,8 @@
   mask-repeat: no-repeat;
   mask-position: center center;
   mask-size: contain;
-  -webkit-mask-image: url(../../img/component/icon/ico_arrow_dropdown.svg);
-  mask-image: url(../../img/component/icon/ico_arrow_dropdown.svg);
+  -webkit-mask-image: url(../img/component/icon/ico_arrow_dropdown.svg);
+  mask-image: url(../img/component/icon/ico_arrow_dropdown.svg);
 }
 .svg-icon.ico-calendar {
   -webkit-mask-repeat: no-repeat;
@@ -458,8 +458,8 @@
   mask-repeat: no-repeat;
   mask-position: center center;
   mask-size: contain;
-  -webkit-mask-image: url(../../img/component/icon/ico_calendar.svg);
-  mask-image: url(../../img/component/icon/ico_calendar.svg);
+  -webkit-mask-image: url(../img/component/icon/ico_calendar.svg);
+  mask-image: url(../img/component/icon/ico_calendar.svg);
 }
 .svg-icon.ico-success-fill {
   -webkit-mask-repeat: no-repeat;
@@ -468,8 +468,8 @@
   mask-repeat: no-repeat;
   mask-position: center center;
   mask-size: contain;
-  -webkit-mask-image: url(../../img/component/icon/ico_success_fill.svg);
-  mask-image: url(../../img/component/icon/ico_success_fill.svg);
+  -webkit-mask-image: url(../img/component/icon/ico_success_fill.svg);
+  mask-image: url(../img/component/icon/ico_success_fill.svg);
   -webkit-mask-image: none;
   mask-image: none;
   background-image: url(../../img/component/icon/ico_success_fill.svg);
@@ -486,8 +486,8 @@
   mask-repeat: no-repeat;
   mask-position: center center;
   mask-size: contain;
-  -webkit-mask-image: url(../../img/component/icon/ico_information_fill.svg);
-  mask-image: url(../../img/component/icon/ico_information_fill.svg);
+  -webkit-mask-image: url(../img/component/icon/ico_information_fill.svg);
+  mask-image: url(../img/component/icon/ico_information_fill.svg);
   -webkit-mask-image: none;
   mask-image: none;
   background-image: url(../../img/component/icon/ico_information_fill.svg);
@@ -504,8 +504,8 @@
   mask-repeat: no-repeat;
   mask-position: center center;
   mask-size: contain;
-  -webkit-mask-image: url(../../img/component/icon/ico_error_fill.svg);
-  mask-image: url(../../img/component/icon/ico_error_fill.svg);
+  -webkit-mask-image: url(../img/component/icon/ico_error_fill.svg);
+  mask-image: url(../img/component/icon/ico_error_fill.svg);
   -webkit-mask-image: none;
   mask-image: none;
   background-image: url(../../img/component/icon/ico_error_fill.svg);
@@ -522,8 +522,8 @@
   mask-repeat: no-repeat;
   mask-position: center center;
   mask-size: contain;
-  -webkit-mask-image: url(../../img/component/icon/ico_complete_fill.svg);
-  mask-image: url(../../img/component/icon/ico_complete_fill.svg);
+  -webkit-mask-image: url(../img/component/icon/ico_complete_fill.svg);
+  mask-image: url(../img/component/icon/ico_complete_fill.svg);
   -webkit-mask-image: none;
   mask-image: none;
   background-image: url(../../img/component/icon/ico_complete_fill.svg);
@@ -540,8 +540,8 @@
   mask-repeat: no-repeat;
   mask-position: center center;
   mask-size: contain;
-  -webkit-mask-image: url(../../img/component/icon/ico_close.svg);
-  mask-image: url(../../img/component/icon/ico_close.svg);
+  -webkit-mask-image: url(../img/component/icon/ico_close.svg);
+  mask-image: url(../img/component/icon/ico_close.svg);
 }
 .svg-icon.ico-fold {
   -webkit-mask-repeat: no-repeat;
@@ -550,8 +550,8 @@
   mask-repeat: no-repeat;
   mask-position: center center;
   mask-size: contain;
-  -webkit-mask-image: url(../../img/component/icon/ico_foldable.svg);
-  mask-image: url(../../img/component/icon/ico_foldable.svg);
+  -webkit-mask-image: url(../img/component/icon/ico_foldable.svg);
+  mask-image: url(../img/component/icon/ico_foldable.svg);
 }
 .svg-icon.ico-fold.right {
   transform: rotate(-180deg);
@@ -563,8 +563,8 @@
   mask-repeat: no-repeat;
   mask-position: center center;
   mask-size: contain;
-  -webkit-mask-image: url(../../img/component/icon/ico_ellipsis.svg);
-  mask-image: url(../../img/component/icon/ico_ellipsis.svg);
+  -webkit-mask-image: url(../img/component/icon/ico_ellipsis.svg);
+  mask-image: url(../img/component/icon/ico_ellipsis.svg);
 }
 .svg-icon.ico-swiper-play {
   -webkit-mask-repeat: no-repeat;
@@ -573,8 +573,8 @@
   mask-repeat: no-repeat;
   mask-position: center center;
   mask-size: contain;
-  -webkit-mask-image: url(../../img/component/icon/ico_swiper_play.svg);
-  mask-image: url(../../img/component/icon/ico_swiper_play.svg);
+  -webkit-mask-image: url(../img/component/icon/ico_swiper_play.svg);
+  mask-image: url(../img/component/icon/ico_swiper_play.svg);
 }
 .svg-icon.ico-swiper-stop {
   -webkit-mask-repeat: no-repeat;
@@ -583,8 +583,8 @@
   mask-repeat: no-repeat;
   mask-position: center center;
   mask-size: contain;
-  -webkit-mask-image: url(../../img/component/icon/ico_swiper_stop.svg);
-  mask-image: url(../../img/component/icon/ico_swiper_stop.svg);
+  -webkit-mask-image: url(../img/component/icon/ico_swiper_stop.svg);
+  mask-image: url(../img/component/icon/ico_swiper_stop.svg);
 }
 .svg-icon.ico-tooltip {
   -webkit-mask-repeat: no-repeat;
@@ -593,8 +593,8 @@
   mask-repeat: no-repeat;
   mask-position: center center;
   mask-size: contain;
-  -webkit-mask-image: url(../../img/component/icon/ico_tooltip.svg);
-  mask-image: url(../../img/component/icon/ico_tooltip.svg);
+  -webkit-mask-image: url(../img/component/icon/ico_tooltip.svg);
+  mask-image: url(../img/component/icon/ico_tooltip.svg);
 }
 .svg-icon.ico-urgent-danger {
   -webkit-mask-repeat: no-repeat;
@@ -603,8 +603,8 @@
   mask-repeat: no-repeat;
   mask-position: center center;
   mask-size: contain;
-  -webkit-mask-image: url(../../img/component/icon/ico_urgent_badge_danger.svg);
-  mask-image: url(../../img/component/icon/ico_urgent_badge_danger.svg);
+  -webkit-mask-image: url(../img/component/icon/ico_urgent_badge_danger.svg);
+  mask-image: url(../img/component/icon/ico_urgent_badge_danger.svg);
 }
 .svg-icon.ico-blog {
   -webkit-mask-repeat: no-repeat;
@@ -613,8 +613,8 @@
   mask-repeat: no-repeat;
   mask-position: center center;
   mask-size: contain;
-  -webkit-mask-image: url(../../img/component/icon/ico_blog.svg);
-  mask-image: url(../../img/component/icon/ico_blog.svg);
+  -webkit-mask-image: url(../img/component/icon/ico_blog.svg);
+  mask-image: url(../img/component/icon/ico_blog.svg);
 }
 .svg-icon.ico-facebook {
   -webkit-mask-repeat: no-repeat;
@@ -623,8 +623,8 @@
   mask-repeat: no-repeat;
   mask-position: center center;
   mask-size: contain;
-  -webkit-mask-image: url(../../img/component/icon/ico_facebook.svg);
-  mask-image: url(../../img/component/icon/ico_facebook.svg);
+  -webkit-mask-image: url(../img/component/icon/ico_facebook.svg);
+  mask-image: url(../img/component/icon/ico_facebook.svg);
 }
 .svg-icon.ico-instagram {
   -webkit-mask-repeat: no-repeat;
@@ -633,8 +633,8 @@
   mask-repeat: no-repeat;
   mask-position: center center;
   mask-size: contain;
-  -webkit-mask-image: url(../../img/component/icon/ico_instagram.svg);
-  mask-image: url(../../img/component/icon/ico_instagram.svg);
+  -webkit-mask-image: url(../img/component/icon/ico_instagram.svg);
+  mask-image: url(../img/component/icon/ico_instagram.svg);
 }
 .svg-icon.ico-sns-x {
   -webkit-mask-repeat: no-repeat;
@@ -643,8 +643,8 @@
   mask-repeat: no-repeat;
   mask-position: center center;
   mask-size: contain;
-  -webkit-mask-image: url(../../img/component/icon/ico_sns_x.svg);
-  mask-image: url(../../img/component/icon/ico_sns_x.svg);
+  -webkit-mask-image: url(../img/component/icon/ico_sns_x.svg);
+  mask-image: url(../img/component/icon/ico_sns_x.svg);
 }
 .svg-icon.ico-youtube {
   -webkit-mask-repeat: no-repeat;
@@ -653,8 +653,8 @@
   mask-repeat: no-repeat;
   mask-position: center center;
   mask-size: contain;
-  -webkit-mask-image: url(../../img/component/icon/ico_youtube.svg);
-  mask-image: url(../../img/component/icon/ico_youtube.svg);
+  -webkit-mask-image: url(../img/component/icon/ico_youtube.svg);
+  mask-image: url(../img/component/icon/ico_youtube.svg);
 }
 .svg-icon.ico-all {
   -webkit-mask-repeat: no-repeat;
@@ -663,8 +663,8 @@
   mask-repeat: no-repeat;
   mask-position: center center;
   mask-size: contain;
-  -webkit-mask-image: url(../../img/component/icon/ico_all.svg);
-  mask-image: url(../../img/component/icon/ico_all.svg);
+  -webkit-mask-image: url(../img/component/icon/ico_all.svg);
+  mask-image: url(../img/component/icon/ico_all.svg);
 }
 .svg-icon.ico-join {
   -webkit-mask-repeat: no-repeat;
@@ -673,8 +673,8 @@
   mask-repeat: no-repeat;
   mask-position: center center;
   mask-size: contain;
-  -webkit-mask-image: url(../../img/component/icon/ico_join.svg);
-  mask-image: url(../../img/component/icon/ico_join.svg);
+  -webkit-mask-image: url(../img/component/icon/ico_join.svg);
+  mask-image: url(../img/component/icon/ico_join.svg);
 }
 .svg-icon.ico-my {
   -webkit-mask-repeat: no-repeat;
@@ -683,8 +683,8 @@
   mask-repeat: no-repeat;
   mask-position: center center;
   mask-size: contain;
-  -webkit-mask-image: url(../../img/component/icon/ico_my.svg);
-  mask-image: url(../../img/component/icon/ico_my.svg);
+  -webkit-mask-image: url(../img/component/icon/ico_my.svg);
+  mask-image: url(../img/component/icon/ico_my.svg);
 }
 .svg-icon.ico-login-go {
   -webkit-mask-repeat: no-repeat;
@@ -693,8 +693,8 @@
   mask-repeat: no-repeat;
   mask-position: center center;
   mask-size: contain;
-  -webkit-mask-image: url(../../img/component/icon/ico_login_certify_go.svg);
-  mask-image: url(../../img/component/icon/ico_login_certify_go.svg);
+  -webkit-mask-image: url(../img/component/icon/ico_login_certify_go.svg);
+  mask-image: url(../img/component/icon/ico_login_certify_go.svg);
 }
 .svg-icon.ico-global {
   -webkit-mask-repeat: no-repeat;
@@ -703,8 +703,8 @@
   mask-repeat: no-repeat;
   mask-position: center center;
   mask-size: contain;
-  -webkit-mask-image: url(../../img/component/icon/ico_global.svg);
-  mask-image: url(../../img/component/icon/ico_global.svg);
+  -webkit-mask-image: url(../img/component/icon/ico_global.svg);
+  mask-image: url(../img/component/icon/ico_global.svg);
 }
 .svg-icon.ico-view-mode {
   -webkit-mask-repeat: no-repeat;
@@ -713,8 +713,8 @@
   mask-repeat: no-repeat;
   mask-position: center center;
   mask-size: contain;
-  -webkit-mask-image: url(../../img/component/icon/ico_view_mode.svg);
-  mask-image: url(../../img/component/icon/ico_view_mode.svg);
+  -webkit-mask-image: url(../img/component/icon/ico_view_mode.svg);
+  mask-image: url(../img/component/icon/ico_view_mode.svg);
 }
 .svg-icon.ico-go-top {
   -webkit-mask-repeat: no-repeat;
@@ -723,8 +723,8 @@
   mask-repeat: no-repeat;
   mask-position: center center;
   mask-size: contain;
-  -webkit-mask-image: url(../../img/component/icon/ico_go_top.svg);
-  mask-image: url(../../img/component/icon/ico_go_top.svg);
+  -webkit-mask-image: url(../img/component/icon/ico_go_top.svg);
+  mask-image: url(../img/component/icon/ico_go_top.svg);
 }
 .svg-icon.ico-login-type01 {
   -webkit-mask-repeat: no-repeat;
@@ -733,8 +733,8 @@
   mask-repeat: no-repeat;
   mask-position: center center;
   mask-size: contain;
-  -webkit-mask-image: url(../../img/component/icon/ico_login_certify_type_01.svg);
-  mask-image: url(../../img/component/icon/ico_login_certify_type_01.svg);
+  -webkit-mask-image: url(../img/component/icon/ico_login_certify_type_01.svg);
+  mask-image: url(../img/component/icon/ico_login_certify_type_01.svg);
 }
 .svg-icon.ico-login-type02 {
   -webkit-mask-repeat: no-repeat;
@@ -743,8 +743,8 @@
   mask-repeat: no-repeat;
   mask-position: center center;
   mask-size: contain;
-  -webkit-mask-image: url(../../img/component/icon/ico_login_certify_type_02.svg);
-  mask-image: url(../../img/component/icon/ico_login_certify_type_02.svg);
+  -webkit-mask-image: url(../img/component/icon/ico_login_certify_type_02.svg);
+  mask-image: url(../img/component/icon/ico_login_certify_type_02.svg);
 }
 .svg-icon.ico-login-type03 {
   -webkit-mask-repeat: no-repeat;
@@ -753,8 +753,8 @@
   mask-repeat: no-repeat;
   mask-position: center center;
   mask-size: contain;
-  -webkit-mask-image: url(../../img/component/icon/ico_login_certify_type_03.svg);
-  mask-image: url(../../img/component/icon/ico_login_certify_type_03.svg);
+  -webkit-mask-image: url(../img/component/icon/ico_login_certify_type_03.svg);
+  mask-image: url(../img/component/icon/ico_login_certify_type_03.svg);
 }
 .svg-icon.ico-login-type04 {
   -webkit-mask-repeat: no-repeat;
@@ -763,8 +763,8 @@
   mask-repeat: no-repeat;
   mask-position: center center;
   mask-size: contain;
-  -webkit-mask-image: url(../../img/component/icon/ico_login_certify_type_04.svg);
-  mask-image: url(../../img/component/icon/ico_login_certify_type_04.svg);
+  -webkit-mask-image: url(../img/component/icon/ico_login_certify_type_04.svg);
+  mask-image: url(../img/component/icon/ico_login_certify_type_04.svg);
 }
 .svg-icon.ico-login-type05 {
   -webkit-mask-repeat: no-repeat;
@@ -773,8 +773,8 @@
   mask-repeat: no-repeat;
   mask-position: center center;
   mask-size: contain;
-  -webkit-mask-image: url(../../img/component/icon/ico_login_certify_type_05.svg);
-  mask-image: url(../../img/component/icon/ico_login_certify_type_05.svg);
+  -webkit-mask-image: url(../img/component/icon/ico_login_certify_type_05.svg);
+  mask-image: url(../img/component/icon/ico_login_certify_type_05.svg);
 }
 .svg-icon.ico-login-type06 {
   -webkit-mask-repeat: no-repeat;
@@ -783,8 +783,8 @@
   mask-repeat: no-repeat;
   mask-position: center center;
   mask-size: contain;
-  -webkit-mask-image: url(../../img/component/icon/ico_login_certify_type_06.svg);
-  mask-image: url(../../img/component/icon/ico_login_certify_type_06.svg);
+  -webkit-mask-image: url(../img/component/icon/ico_login_certify_type_06.svg);
+  mask-image: url(../img/component/icon/ico_login_certify_type_06.svg);
 }
 .svg-icon.ico-flag {
   -webkit-mask-repeat: no-repeat;
@@ -793,8 +793,8 @@
   mask-repeat: no-repeat;
   mask-position: center center;
   mask-size: contain;
-  -webkit-mask-image: url(../../img/component/icon/ico_flag.svg);
-  mask-image: url(../../img/component/icon/ico_flag.svg);
+  -webkit-mask-image: url(../img/component/icon/ico_flag.svg);
+  mask-image: url(../img/component/icon/ico_flag.svg);
   -webkit-mask-image: none;
   mask-image: none;
   background-image: url(../../img/component/icon/ico_flag.svg);
@@ -811,8 +811,8 @@
   mask-repeat: no-repeat;
   mask-position: center center;
   mask-size: contain;
-  -webkit-mask-image: url(../../img/component/icon/ico_file.svg);
-  mask-image: url(../../img/component/icon/ico_file.svg);
+  -webkit-mask-image: url(../img/component/icon/ico_file.svg);
+  mask-image: url(../img/component/icon/ico_file.svg);
 }
 .svg-icon.ico-checkbox {
   -webkit-mask-repeat: no-repeat;
@@ -821,8 +821,8 @@
   mask-repeat: no-repeat;
   mask-position: center center;
   mask-size: contain;
-  -webkit-mask-image: url(../../img/component/icon/ico_checkbox_checked.svg);
-  mask-image: url(../../img/component/icon/ico_checkbox_checked.svg);
+  -webkit-mask-image: url(../img/component/icon/ico_checkbox_checked.svg);
+  mask-image: url(../img/component/icon/ico_checkbox_checked.svg);
 }
 
 [data-krds-mode=high-contrast] .svg-icon.ico-help {
