@@ -1,0 +1,11 @@
+{{ $css1 := resources.Get "css/component/output.css"}}
+{{ $css2 := resources.Get "css/token/krds_tokens.css"}}
+{{ $css3 := resources.Get "css/egovframe.css"}}
+
+{{ $mergedCSS := slice $css1 $css2 $css3 | resources.Concat "css/custom.css"}}
+
+{{- if eq hugo.Environment "development" }}
+  <link rel="stylesheet" href="{{ $mergedCSS.RelPermalink }}">
+{{- else }}
+  <link rel="stylesheet" href="{{ $mergedCSS.RelPermalink }}" integrity="{{ $mergedCSS.Data.Integrity }}" crossorigin="anonymous">
+{{- end }}

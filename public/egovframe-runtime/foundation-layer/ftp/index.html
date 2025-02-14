@@ -1,0 +1,1708 @@
+<!DOCTYPE html>
+<html lang="kr" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>FTP Service | 표준프레임워크 개발가이드</title>
+
+
+
+
+
+  <link rel="stylesheet" href="/css/custom.css">
+
+
+
+
+
+
+      <script src="/js/custom.js" defer></script>
+
+
+
+
+    /fonts/PretendardGOV-Bold.subset.woff2
+    
+
+    /fonts/PretendardGOV-Medium.subset.woff2
+    
+
+    /fonts/PretendardGOV-Regular.subset.woff2
+    
+
+    /fonts/PretendardGOV-Bold.subset.woff
+    
+
+    /fonts/PretendardGOV-Medium.subset.woff
+    
+
+    /fonts/PretendardGOV-Regular.subset.woff
+    
+
+</head>
+<body>
+  <header id="krds-header">
+    
+<div class="header-in">
+    
+    <div class="header-container">
+        <div class="inner" style="padding-bottom:0">
+            <div class="header-branding">
+                <h2 class="logo">
+                    <a href="/"></a>
+                </h2>
+                <div class="header-actions">
+                    
+                    
+<nav class="krds-main-menu" style="border:none">
+  <div class="inner">
+    <ul class="gnb-menu">
+      
+      <li>
+          <a href="/egovframe-development/" class="gnb-main-trigger is-link ">개발환경(예정)</a>
+      </li>
+      
+      <li>
+          <a href="/egovframe-runtime/" class="gnb-main-trigger is-link active">실행환경</a>
+      </li>
+      
+      <li>
+          <a href="/runtime-example/" class="gnb-main-trigger is-link ">실행환경 예제</a>
+      </li>
+      
+      <li>
+          <a href="/common-component/" class="gnb-main-trigger is-link ">공통컴포넌트(예정)</a>
+      </li>
+      
+    </ul>
+  </div>
+</nav>
+                </div>
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+  </header>
+  <main id="wrap">
+    
+      <div id="container" class="krds-in-page-navigation-type">
+          <div class="inner in-between layout">
+            
+              
+<nav class="krds-side-navigation">
+      
+      </ul>
+    
+      
+      <h2 class="lnb-tit">실행환경</h2>
+          
+          <ul class="lnb-list" role="menubar">
+              
+              
+              <li class="lnb-item" role="none">
+                    <button type="button" class="lnb-btn lnb-toggle" role="menuitem" aria-controls="lnbmenu0" aria-expanded="false" data-url="/egovframe-runtime/intro/">실행환경 소개</button>
+                    <div class="lnb-submenu">
+                        <ul id="lnb-menu0" role="menu">
+                          
+                            
+                            <li class="lnb-subitem">
+                              <a href="/egovframe-runtime/intro/overview/" class="lnb-btn lnb-link" role="menuitem">OverView</a>
+                            </li>
+                            </ul>
+                    </div>
+                  
+              
+              <li class="lnb-item" role="none">
+                    <button type="button" class="lnb-btn lnb-toggle" role="menuitem" aria-controls="lnbmenu1" aria-expanded="false" data-url="/egovframe-runtime/foundation-layer-core/">공통기반 핵심</button>
+                    <div class="lnb-submenu">
+                        <ul id="lnb-menu1" role="menu">
+                          
+                            
+                            <li class="lnb-subitem" role="none">
+                                <button type="button" class="lnb-btn lnb-toggle-popup" role="menuitem" aria-controls="lnbmenu-1" aria-expanded="false" aria-haspopup="true" data-url="/egovframe-runtime/foundation-layer-core/ioc-container/">
+                                  IoC Container<span class="sr-only">열기</span>
+                                </button>
+                              <div class="lnb-submenu-lv2 " id="lnbmenu-1" role="menu">
+                                <button type="button" class="lnb-btn-tit"  data-url="/egovframe-runtime/foundation-layer-core/">IoC Container</button>
+                                <ul>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/foundation-layer-core/ioc-container/ioc-container-basics/">Basics</a>
+                                      
+                                    </li>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/foundation-layer-core/ioc-container/ioc-container-dependencies/">Dependencies</a>
+                                      
+                                    </li>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/foundation-layer-core/ioc-container/ioc-container-bean_scope/">Bean Scopes</a>
+                                      
+                                    </li>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/foundation-layer-core/ioc-container/ioc-container-customizing_the_nature_of_a_bean/">Customizing</a>
+                                      
+                                    </li>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/foundation-layer-core/ioc-container/ioc-container-bean-definition-profiles/">Profiles</a>
+                                      
+                                    </li>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/foundation-layer-core/ioc-container/ioc-container-bean_definition_inheritance/">Inheritance</a>
+                                      
+                                    </li>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/foundation-layer-core/ioc-container/ioc-container_extension_points/">Extension</a>
+                                      
+                                    </li>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/foundation-layer-core/ioc-container/ioc-container-the-applicationcontext/">The ApplicationContext</a>
+                                      
+                                    </li>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/foundation-layer-core/ioc-container/ioc-container-annotation-based_configuration/">Annotation</a>
+                                      
+                                    </li>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/foundation-layer-core/ioc-container/ioc-container-classpath_scanning_for_managed_components/">Components Scan</a>
+                                      
+                                    </li>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/foundation-layer-core/ioc-container/ioc-container-jsr_330_standard_annotations/">JSR 330</a>
+                                      
+                                    </li>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/foundation-layer-core/ioc-container/ioc-container-java-based_configuration/">JavaConfig</a>
+                                      
+                                    </li>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/foundation-layer-core/ioc-container/ioc-container-enviroment_abstraction/">Environment Abstraction</a>
+                                      
+                                    </li>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/foundation-layer-core/ioc-container/ioc-container-iversion-of-control/">Inversion of Control</a>
+                                      
+                                    </li>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/foundation-layer-core/ioc-container/ioc-container-generic/">Generic</a>
+                                      
+                                    </li>
+                                  </ul>
+                              </div>
+                            </li>
+                            
+                            
+                            <li class="lnb-subitem" role="none">
+                                <button type="button" class="lnb-btn lnb-toggle-popup" role="menuitem" aria-controls="lnbmenu-1" aria-expanded="false" aria-haspopup="true" data-url="/egovframe-runtime/foundation-layer-core/aop/">
+                                  AOP<span class="sr-only">열기</span>
+                                </button>
+                              <div class="lnb-submenu-lv2 " id="lnbmenu-1" role="menu">
+                                <button type="button" class="lnb-btn-tit"  data-url="/egovframe-runtime/foundation-layer-core/">AOP</button>
+                                <ul>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/foundation-layer-core/aop/aop-aspectj/">AspectJ</a>
+                                      
+                                    </li>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/foundation-layer-core/aop/aop-xmlschema/">AOP XML</a>
+                                      
+                                    </li>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/foundation-layer-core/aop/aop-guide/">AOP 가이드라인</a>
+                                      
+                                    </li>
+                                  </ul>
+                              </div>
+                            </li>
+                            
+                            
+                            <li class="lnb-subitem">
+                              <a href="/egovframe-runtime/foundation-layer-core/resource/" class="lnb-btn lnb-link" role="menuitem">Resource</a>
+                            </li>
+                            
+                            
+                            <li class="lnb-subitem">
+                              <a href="/egovframe-runtime/foundation-layer-core/spel/" class="lnb-btn lnb-link" role="menuitem">SpEL</a>
+                            </li>
+                            </ul>
+                    </div>
+                  
+              
+              <li class="lnb-item active" role="none">
+                    <button type="button" class="lnb-btn lnb-toggle" role="menuitem" aria-controls="lnbmenu2" aria-expanded="false" data-url="/egovframe-runtime/foundation-layer/">공통기반</button>
+                    <div class="lnb-submenu">
+                        <ul id="lnb-menu2" role="menu">
+                          
+                            
+                            <li class="lnb-subitem" role="none">
+                                <button type="button" class="lnb-btn lnb-toggle-popup" role="menuitem" aria-controls="lnbmenu-2" aria-expanded="false" aria-haspopup="true" data-url="/egovframe-runtime/foundation-layer/server-security/">
+                                  Server Security<span class="sr-only">열기</span>
+                                </button>
+                              <div class="lnb-submenu-lv2 " id="lnbmenu-2" role="menu">
+                                <button type="button" class="lnb-btn-tit"  data-url="/egovframe-runtime/foundation-layer/">Server Security</button>
+                                <ul>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/foundation-layer/server-security/server-security-architecture/">Server Security Architecture</a>
+                                      
+                                    </li>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/foundation-layer/server-security/server-security-authentication/">Authentication</a>
+                                      
+                                    </li>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/foundation-layer/server-security/server-security-authorization/">Authorization</a>
+                                      
+                                    </li>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/foundation-layer/server-security/server-security-simplifying-settings/">설정 간소화</a>
+                                      
+                                    </li>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/foundation-layer/server-security/server-security-upgrade/">Server Security 업그레이드</a>
+                                      
+                                    </li>
+                                  </ul>
+                              </div>
+                            </li>
+                            
+                            
+                            <li class="lnb-subitem">
+                              <a href="/egovframe-runtime/foundation-layer/session-based-access-control-permission-settings/" class="lnb-btn lnb-link" role="menuitem">Session 방식 접근제어</a>
+                            </li>
+                            
+                            
+                            <li class="lnb-subitem">
+                              <a href="/egovframe-runtime/foundation-layer/scheduling/" class="lnb-btn lnb-link" role="menuitem">Scheduling 서비스</a>
+                            </li>
+                            
+                            
+                            <li class="lnb-subitem" role="none">
+                                <button type="button" class="lnb-btn lnb-toggle-popup" role="menuitem" aria-controls="lnbmenu-2" aria-expanded="false" aria-haspopup="true" data-url="/egovframe-runtime/foundation-layer/logging/">
+                                  Logging<span class="sr-only">열기</span>
+                                </button>
+                              <div class="lnb-submenu-lv2 " id="lnbmenu-2" role="menu">
+                                <button type="button" class="lnb-btn-tit"  data-url="/egovframe-runtime/foundation-layer/">Logging</button>
+                                <ul>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/foundation-layer/logging/logging-log4j2/">Log4j2</a>
+                                      
+                                        <ul class="lnb-submenu-lv3">
+                                        
+                                          <li class="" role="none">
+                                            <a href="/egovframe-runtime/foundation-layer/logging/logging-log4j2/logging-log4j2-configuration_code/">Log4j2 코드로 설정</a>
+                                          </li>
+                                        
+                                          <li class="" role="none">
+                                            <a href="/egovframe-runtime/foundation-layer/logging/logging-log4j2/logging-log4j2-configuration_file/">Log4j2 파일로 설정</a>
+                                          </li>
+                                        
+                                        </ul>
+                                      
+                                    </li>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/foundation-layer/logging/logging-slf4j/">SLF4J</a>
+                                      
+                                    </li>
+                                  </ul>
+                              </div>
+                            </li>
+                            
+                            
+                            <li class="lnb-subitem">
+                              <a href="/egovframe-runtime/foundation-layer/id-generated/" class="lnb-btn lnb-link" role="menuitem">Id Generation 서비스</a>
+                            </li>
+                            
+                            
+                            <li class="lnb-subitem" role="none">
+                                <button type="button" class="lnb-btn lnb-toggle-popup" role="menuitem" aria-controls="lnbmenu-2" aria-expanded="false" aria-haspopup="true" data-url="/egovframe-runtime/foundation-layer/property/">
+                                  Property<span class="sr-only">열기</span>
+                                </button>
+                              <div class="lnb-submenu-lv2 " id="lnbmenu-2" role="menu">
+                                <button type="button" class="lnb-btn-tit"  data-url="/egovframe-runtime/foundation-layer/">Property</button>
+                                <ul>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/foundation-layer/property/property-service/">Property Service</a>
+                                      
+                                    </li>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/foundation-layer/property/property-source/">Property Source</a>
+                                      
+                                    </li>
+                                  </ul>
+                              </div>
+                            </li>
+                            
+                            
+                            <li class="lnb-subitem">
+                              <a href="/egovframe-runtime/foundation-layer/environment/" class="lnb-btn lnb-link" role="menuitem">Environment</a>
+                            </li>
+                            
+                            
+                            <li class="lnb-subitem" role="none">
+                                <button type="button" class="lnb-btn lnb-toggle-popup" role="menuitem" aria-controls="lnbmenu-2" aria-expanded="false" aria-haspopup="true" data-url="/egovframe-runtime/foundation-layer/cache/">
+                                  Cache<span class="sr-only">열기</span>
+                                </button>
+                              <div class="lnb-submenu-lv2 " id="lnbmenu-2" role="menu">
+                                <button type="button" class="lnb-btn-tit"  data-url="/egovframe-runtime/foundation-layer/">Cache</button>
+                                <ul>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/foundation-layer/cache/ehCache/">EhCache</a>
+                                      
+                                    </li>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/foundation-layer/cache/abstraction/">Abstraction</a>
+                                      
+                                    </li>
+                                  </ul>
+                              </div>
+                            </li>
+                            
+                            
+                            <li class="lnb-subitem">
+                              <a href="/egovframe-runtime/foundation-layer/marshalling-unmarshallig/" class="lnb-btn lnb-link" role="menuitem">Marshalling/Unmarshallig</a>
+                            </li>
+                            
+                            
+                            <li class="lnb-subitem">
+                              <a href="/egovframe-runtime/foundation-layer/xml-manipulation/" class="lnb-btn lnb-link" role="menuitem">XML Manipulation</a>
+                            </li>
+                            
+                            
+                            <li class="lnb-subitem">
+                              <a href="/egovframe-runtime/foundation-layer/object-pooling/" class="lnb-btn lnb-link" role="menuitem">Object Pooling</a>
+                            </li>
+                            
+                            
+                            <li class="lnb-subitem" role="none">
+                                <button type="button" class="lnb-btn lnb-toggle-popup" role="menuitem" aria-controls="lnbmenu-2" aria-expanded="false" aria-haspopup="true" data-url="/egovframe-runtime/foundation-layer/crypto/">
+                                  Crypto<span class="sr-only">열기</span>
+                                </button>
+                              <div class="lnb-submenu-lv2 " id="lnbmenu-2" role="menu">
+                                <button type="button" class="lnb-btn-tit"  data-url="/egovframe-runtime/foundation-layer/">Crypto</button>
+                                <ul>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/foundation-layer/crypto/crypto-encryption-decryption/">암복호화 서비스</a>
+                                      
+                                    </li>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/foundation-layer/crypto/crypto-simplification/">Crypto 간소화 서비스</a>
+                                      
+                                    </li>
+                                  </ul>
+                              </div>
+                            </li>
+                            
+                            
+                            <li class="lnb-subitem active">
+                              <a href="/egovframe-runtime/foundation-layer/ftp/" class="lnb-btn lnb-link" role="menuitem">FTP</a>
+                            </li>
+                            
+                            
+                            <li class="lnb-subitem">
+                              <a href="/egovframe-runtime/foundation-layer/mail/" class="lnb-btn lnb-link" role="menuitem">Mail 서비스</a>
+                            </li>
+                            
+                            
+                            <li class="lnb-subitem" role="none">
+                                <button type="button" class="lnb-btn lnb-toggle-popup" role="menuitem" aria-controls="lnbmenu-2" aria-expanded="false" aria-haspopup="true" data-url="/egovframe-runtime/foundation-layer/compress-decompress/">
+                                  Compress/Decompress<span class="sr-only">열기</span>
+                                </button>
+                              <div class="lnb-submenu-lv2 " id="lnbmenu-2" role="menu">
+                                <button type="button" class="lnb-btn-tit"  data-url="/egovframe-runtime/foundation-layer/">Compress/Decompress</button>
+                                <ul>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/foundation-layer/compression-file-types/">압축 파일의 종류</a>
+                                      
+                                    </li>
+                                  </ul>
+                              </div>
+                            </li>
+                            
+                            
+                            <li class="lnb-subitem" role="none">
+                                <button type="button" class="lnb-btn lnb-toggle-popup" role="menuitem" aria-controls="lnbmenu-2" aria-expanded="false" aria-haspopup="true" data-url="/egovframe-runtime/foundation-layer/file-upload-download-service/">
+                                  File Upload/Download<span class="sr-only">열기</span>
+                                </button>
+                              <div class="lnb-submenu-lv2 " id="lnbmenu-2" role="menu">
+                                <button type="button" class="lnb-btn-tit"  data-url="/egovframe-runtime/foundation-layer/">File Upload/Download</button>
+                                <ul>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/foundation-layer/file-upload-download-service/file-upload-service/">File Upload</a>
+                                      
+                                        <ul class="lnb-submenu-lv3">
+                                        
+                                          <li class="" role="none">
+                                            <a href="/egovframe-runtime/foundation-layer/file-upload-download-service/file-upload/file-upload-service-multi-file-support/">Multipart</a>
+                                          </li>
+                                        
+                                        </ul>
+                                      
+                                    </li>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/foundation-layer/file-upload-download-service/file-download-service/">File Download</a>
+                                      
+                                        <ul class="lnb-submenu-lv3">
+                                        
+                                          <li class="" role="none">
+                                            <a href="/egovframe-runtime/foundation-layer/file-upload-download-service/file-download/file-download-service-tomcat-encoding/">Tomcat 한글</a>
+                                          </li>
+                                        
+                                        </ul>
+                                      
+                                    </li>
+                                  </ul>
+                              </div>
+                            </li>
+                            
+                            
+                            <li class="lnb-subitem">
+                              <a href="/egovframe-runtime/foundation-layer/file-handling/" class="lnb-btn lnb-link" role="menuitem">File Handling</a>
+                            </li>
+                            
+                            
+                            <li class="lnb-subitem">
+                              <a href="/egovframe-runtime/foundation-layer/excel/" class="lnb-btn lnb-link" role="menuitem">Excel</a>
+                            </li>
+                            
+                            
+                            <li class="lnb-subitem">
+                              <a href="/egovframe-runtime/foundation-layer/string-util/" class="lnb-btn lnb-link" role="menuitem">String Util</a>
+                            </li>
+                            </ul>
+                    </div>
+                  
+              
+              <li class="lnb-item" role="none">
+                    <button type="button" class="lnb-btn lnb-toggle" role="menuitem" aria-controls="lnbmenu3" aria-expanded="false" data-url="/egovframe-runtime/presentation-layer/">화면처리</button>
+                    <div class="lnb-submenu">
+                        <ul id="lnb-menu3" role="menu">
+                          
+                            
+                            <li class="lnb-subitem" role="none">
+                                <button type="button" class="lnb-btn lnb-toggle-popup" role="menuitem" aria-controls="lnbmenu-3" aria-expanded="false" aria-haspopup="true" data-url="/egovframe-runtime/presentation-layer/web-servlet/">
+                                  Web Servlet<span class="sr-only">열기</span>
+                                </button>
+                              <div class="lnb-submenu-lv2 " id="lnbmenu-3" role="menu">
+                                <button type="button" class="lnb-btn-tit"  data-url="/egovframe-runtime/presentation-layer/">Web Servlet</button>
+                                <ul>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/presentation-layer/web-servlet/web-servlet-spring-mvc-architecture/">MVC</a>
+                                      
+                                    </li>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/presentation-layer/web-servlet/web-servlet-dispatcherservlet/">DispatcherServlet</a>
+                                      
+                                    </li>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/presentation-layer/web-servlet/web-servlet-handlermapping/">HandlerMapping</a>
+                                      
+                                    </li>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/presentation-layer/web-servlet/web-servlet-spring-mvc-tag-configuration/">Tag Configuration</a>
+                                      
+                                    </li>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/presentation-layer/web-servlet/web-servlet-controller/">Controller</a>
+                                      
+                                    </li>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/presentation-layer/web-servlet/web-servlet-validation/">Validation</a>
+                                      
+                                    </li>
+                                  </ul>
+                              </div>
+                            </li>
+                            
+                            
+                            <li class="lnb-subitem" role="none">
+                                <button type="button" class="lnb-btn lnb-toggle-popup" role="menuitem" aria-controls="lnbmenu-3" aria-expanded="false" aria-haspopup="true" data-url="/egovframe-runtime/presentation-layer/web-servlet-declarative-validation/">
+                                  Bean Validation<span class="sr-only">열기</span>
+                                </button>
+                              <div class="lnb-submenu-lv2 " id="lnbmenu-3" role="menu">
+                                <button type="button" class="lnb-btn-tit"  data-url="/egovframe-runtime/presentation-layer/">Bean Validation</button>
+                                <ul>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/presentation-layer/web-servlet-declarative-validation/web-servlet-view/">View</a>
+                                      
+                                    </li>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/presentation-layer/web-servlet-declarative-validation/web-servlet-annotationcommandmapargumentresolver/">@CommandMap</a>
+                                      
+                                    </li>
+                                  </ul>
+                              </div>
+                            </li>
+                            
+                            
+                            <li class="lnb-subitem" role="none">
+                                <button type="button" class="lnb-btn lnb-toggle-popup" role="menuitem" aria-controls="lnbmenu-3" aria-expanded="false" aria-haspopup="true" data-url="/egovframe-runtime/presentation-layer/web-reactive/">
+                                  Web Reactive<span class="sr-only">열기</span>
+                                </button>
+                              <div class="lnb-submenu-lv2 " id="lnbmenu-3" role="menu">
+                                <button type="button" class="lnb-btn-tit"  data-url="/egovframe-runtime/presentation-layer/">Web Reactive</button>
+                                <ul>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/presentation-layer/web-reactive/web-reactive-reactive-core/">Reactive Core</a>
+                                      
+                                    </li>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/presentation-layer/web-reactive/web-reactive-dispatcherhandler/">DispatcherHandler</a>
+                                      
+                                    </li>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/presentation-layer/web-reactive/web-reactive-annotated-controllers/">Annotated Controllers</a>
+                                      
+                                    </li>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/presentation-layer/web-reactive/web-reactive-functional-endpoints/">Functional Endpoints</a>
+                                      
+                                    </li>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/presentation-layer/web-reactive/web-reactive-webclient/">WebClient</a>
+                                      
+                                    </li>
+                                  </ul>
+                              </div>
+                            </li>
+                            
+                            
+                            <li class="lnb-subitem">
+                              <a href="/egovframe-runtime/presentation-layer/ajax/" class="lnb-btn lnb-link" role="menuitem">Ajax 지원</a>
+                            </li>
+                            
+                            
+                            <li class="lnb-subitem">
+                              <a href="/egovframe-runtime/presentation-layer/internationalization/" class="lnb-btn lnb-link" role="menuitem">Internationalization</a>
+                            </li>
+                            
+                            
+                            <li class="lnb-subitem" role="none">
+                                <button type="button" class="lnb-btn lnb-toggle-popup" role="menuitem" aria-controls="lnbmenu-3" aria-expanded="false" aria-haspopup="true" data-url="/egovframe-runtime/presentation-layer/security/">
+                                  Security<span class="sr-only">열기</span>
+                                </button>
+                              <div class="lnb-submenu-lv2 " id="lnbmenu-3" role="menu">
+                                <button type="button" class="lnb-btn-tit"  data-url="/egovframe-runtime/presentation-layer/">Security</button>
+                                <ul>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/presentation-layer/security/security-jakarta-commons-validator/">Jakarta Commons Validator</a>
+                                      
+                                    </li>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/presentation-layer/security/security-validationa-add-rules-in-common-validator/">Validation Rule</a>
+                                      
+                                    </li>
+                                  </ul>
+                              </div>
+                            </li>
+                            
+                            
+                            <li class="lnb-subitem">
+                              <a href="/egovframe-runtime/presentation-layer/ui-adaptor-service/" class="lnb-btn lnb-link" role="menuitem">UI Adaptor</a>
+                            </li>
+                            
+                            
+                            <li class="lnb-subitem">
+                              <a href="/egovframe-runtime/presentation-layer/asynchronous-request-processing/" class="lnb-btn lnb-link" role="menuitem">UI 비동기요청</a>
+                            </li>
+                            
+                            
+                            <li class="lnb-subitem">
+                              <a href="/egovframe-runtime/presentation-layer/jquery-ajax/" class="lnb-btn lnb-link" role="menuitem">jQuery Ajax</a>
+                            </li>
+                            
+                            
+                            <li class="lnb-subitem" role="none">
+                                <button type="button" class="lnb-btn lnb-toggle-popup" role="menuitem" aria-controls="lnbmenu-3" aria-expanded="false" aria-haspopup="true" data-url="/egovframe-runtime/presentation-layer/webSocket/">
+                                  WebSocket<span class="sr-only">열기</span>
+                                </button>
+                              <div class="lnb-submenu-lv2 " id="lnbmenu-3" role="menu">
+                                <button type="button" class="lnb-btn-tit"  data-url="/egovframe-runtime/presentation-layer/">WebSocket</button>
+                                <ul>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/presentation-layer/webSocket/websocket-stomp/">STOMP</a>
+                                      
+                                    </li>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/presentation-layer/webSocket/websocket-sockjs/">SockJS</a>
+                                      
+                                    </li>
+                                  </ul>
+                              </div>
+                            </li>
+                            
+                            
+                            <li class="lnb-subitem">
+                              <a href="/egovframe-runtime/presentation-layer/bootstrap/" class="lnb-btn lnb-link" role="menuitem">Bootstrap</a>
+                            </li>
+                            
+                            
+                            <li class="lnb-subitem">
+                              <a href="/egovframe-runtime/presentation-layer/uxui-controller-component/" class="lnb-btn lnb-link" role="menuitem">모바일 UX/UI</a>
+                            </li>
+                            
+                            
+                            <li class="lnb-subitem">
+                              <a href="/egovframe-runtime/presentation-layer/html5-css3.0-javascript-module-app-framework-basic/" class="lnb-btn lnb-link" role="menuitem">JQuery Mobile</a>
+                            </li>
+                            </ul>
+                    </div>
+                  
+              
+              <li class="lnb-item" role="none">
+                    <button type="button" class="lnb-btn lnb-toggle" role="menuitem" aria-controls="lnbmenu4" aria-expanded="false" data-url="/egovframe-runtime/business-logic-layer/">업무처리</button>
+                    <div class="lnb-submenu">
+                        <ul id="lnb-menu4" role="menu">
+                          
+                            
+                            <li class="lnb-subitem">
+                              <a href="/egovframe-runtime/business-logic-layer/exception-handling/" class="lnb-btn lnb-link" role="menuitem">Exception Handling</a>
+                            </li>
+                            
+                            
+                            <li class="lnb-subitem" role="none">
+                                <button type="button" class="lnb-btn lnb-toggle-popup" role="menuitem" aria-controls="lnbmenu-4" aria-expanded="false" aria-haspopup="true" data-url="/egovframe-runtime/business-logic-layer/spring-web-flow/">
+                                  Spring Web Flow<span class="sr-only">열기</span>
+                                </button>
+                              <div class="lnb-submenu-lv2 " id="lnbmenu-4" role="menu">
+                                <button type="button" class="lnb-btn-tit"  data-url="/egovframe-runtime/business-logic-layer/">Spring Web Flow</button>
+                                <ul>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/business-logic-layer/spring-web-flow/swf-getting-started/">SWF Getting Started</a>
+                                      
+                                        <ul class="lnb-submenu-lv3">
+                                        
+                                          <li class="" role="none">
+                                            <a href="/egovframe-runtime/business-logic-layer/spring-web-flow/swf-getting-started-hello-world/">Hello world 예제</a>
+                                          </li>
+                                        
+                                        </ul>
+                                      
+                                    </li>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/business-logic-layer/spring-web-flow/swf-configuration/">SWF Configuration</a>
+                                      
+                                        <ul class="lnb-submenu-lv3">
+                                        
+                                          <li class="" role="none">
+                                            <a href="/egovframe-runtime/business-logic-layer/spring-web-flow/swf-configuration-setting-system/">시스템 설정</a>
+                                          </li>
+                                        
+                                          <li class="" role="none">
+                                            <a href="/egovframe-runtime/business-logic-layer/spring-web-flow/swf-configuration-with-spring-mvc/">MVC 연동</a>
+                                          </li>
+                                        
+                                          <li class="" role="none">
+                                            <a href="/egovframe-runtime/business-logic-layer/spring-web-flow/swf-configuration-securing-flows/">Securing Flows</a>
+                                          </li>
+                                        
+                                          <li class="" role="none">
+                                            <a href="/egovframe-runtime/business-logic-layer/spring-web-flow/swf-configuration-flow-managed-persistence/">Flow Managed Persistence</a>
+                                          </li>
+                                        
+                                        </ul>
+                                      
+                                    </li>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/business-logic-layer/spring-web-flow/swf-elements/">SWF Elements</a>
+                                      
+                                        <ul class="lnb-submenu-lv3">
+                                        
+                                          <li class="" role="none">
+                                            <a href="/egovframe-runtime/business-logic-layer/spring-web-flow/swf-elements/swf-elements-flow-definition/">Flow 정의</a>
+                                          </li>
+                                        
+                                          <li class="" role="none">
+                                            <a href="/egovframe-runtime/business-logic-layer/spring-web-flow/swf-elements/swf-elements-expression-language/">Expression Language</a>
+                                          </li>
+                                        
+                                          <li class="" role="none">
+                                            <a href="/egovframe-runtime/business-logic-layer/spring-web-flow/swf-elements/swf-elements-rendering-views/">Rendering View</a>
+                                          </li>
+                                        
+                                          <li class="" role="none">
+                                            <a href="/egovframe-runtime/business-logic-layer/spring-web-flow/swf-elements/swf-elements-executing-actions/">Executing Actions</a>
+                                          </li>
+                                        
+                                          <li class="" role="none">
+                                            <a href="/egovframe-runtime/business-logic-layer/spring-web-flow/swf-elements/swf-elements-flow-inheritance/">Flow 상속</a>
+                                          </li>
+                                        
+                                        </ul>
+                                      
+                                    </li>
+                                  </ul>
+                              </div>
+                            </li>
+                            </ul>
+                    </div>
+                  
+              
+              <li class="lnb-item" role="none">
+                    <button type="button" class="lnb-btn lnb-toggle" role="menuitem" aria-controls="lnbmenu5" aria-expanded="false" data-url="/egovframe-runtime/persistence-layer/">데이터처리</button>
+                    <div class="lnb-submenu">
+                        <ul id="lnb-menu5" role="menu">
+                          
+                            
+                            <li class="lnb-subitem">
+                              <a href="/egovframe-runtime/persistence-layer/data-source/" class="lnb-btn lnb-link" role="menuitem">DataSource</a>
+                            </li>
+                            
+                            
+                            <li class="lnb-subitem" role="none">
+                                <button type="button" class="lnb-btn lnb-toggle-popup" role="menuitem" aria-controls="lnbmenu-5" aria-expanded="false" aria-haspopup="true" data-url="/egovframe-runtime/persistence-layer/dataaccess-ibatis/">
+                                  IBatis<span class="sr-only">열기</span>
+                                </button>
+                              <div class="lnb-submenu-lv2 " id="lnbmenu-5" role="menu">
+                                <button type="button" class="lnb-btn-tit"  data-url="/egovframe-runtime/persistence-layer/">IBatis</button>
+                                <ul>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/persistence-layer/dataaccess-ibatis/dataaccess-ibatis_configuration/">iBATIS Configuration</a>
+                                      
+                                    </li>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/persistence-layer/dataaccess-ibatis/dataaccess-spring_ibatis_integration/">Spring-iBATIS Integration</a>
+                                      
+                                    </li>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/persistence-layer/dataaccess-ibatis/dataaccess-data_type/">Data Type</a>
+                                      
+                                    </li>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/persistence-layer/dataaccess-ibatis/dataaccess-parameterMap/">parameterMap</a>
+                                      
+                                    </li>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/persistence-layer/dataaccess-ibatis/dataaccess-inline_paramters/">Inline Parameters</a>
+                                      
+                                    </li>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/persistence-layer/dataaccess-ibatis/dataaccess-resultMap/">resultMap</a>
+                                      
+                                    </li>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/persistence-layer/dataaccess-ibatis/dataaccess-dynamic-sql/">Dynamic SQL</a>
+                                      
+                                    </li>
+                                  </ul>
+                              </div>
+                            </li>
+                            
+                            
+                            <li class="lnb-subitem" role="none">
+                                <button type="button" class="lnb-btn lnb-toggle-popup" role="menuitem" aria-controls="lnbmenu-5" aria-expanded="false" aria-haspopup="true" data-url="/egovframe-runtime/persistence-layer/dataaccess-mybatis/">
+                                  MyBatis<span class="sr-only">열기</span>
+                                </button>
+                              <div class="lnb-submenu-lv2 " id="lnbmenu-5" role="menu">
+                                <button type="button" class="lnb-btn-tit"  data-url="/egovframe-runtime/persistence-layer/">MyBatis</button>
+                                <ul>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/persistence-layer/dataaccess-mybatis/dataaccess-ibatis_vs_maybatis/">주요 변경사항</a>
+                                      
+                                    </li>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/persistence-layer/dataaccess-mybatis/dataaccess-getting_started/">시작하기</a>
+                                      
+                                    </li>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/persistence-layer/dataaccess-mybatis/dataaccess-configuration_xml/">Configuration XML</a>
+                                      
+                                    </li>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/persistence-layer/dataaccess-mybatis/dataaccess-mapper_xml_files/">Mapper XML Files</a>
+                                      
+                                    </li>
+                                  </ul>
+                              </div>
+                            </li>
+                            
+                            
+                            <li class="lnb-subitem">
+                              <a href="/egovframe-runtime/persistence-layer/dataaccess-mybatis-guide/" class="lnb-btn lnb-link" role="menuitem">MyBatis 적용 가이드</a>
+                            </li>
+                            
+                            
+                            <li class="lnb-subitem" role="none">
+                                <button type="button" class="lnb-btn lnb-toggle-popup" role="menuitem" aria-controls="lnbmenu-5" aria-expanded="false" aria-haspopup="true" data-url="/egovframe-runtime/persistence-layer/jpa-spring-data/">
+                                  JPA<span class="sr-only">열기</span>
+                                </button>
+                              <div class="lnb-submenu-lv2 " id="lnbmenu-5" role="menu">
+                                <button type="button" class="lnb-btn-tit"  data-url="/egovframe-runtime/persistence-layer/">JPA</button>
+                                <ul>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/persistence-layer/jpa-spring-data/jpa-repository/">JPA Repository</a>
+                                      
+                                    </li>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/persistence-layer/jpa-spring-data/jpa-querymethod/">Query Method</a>
+                                      
+                                    </li>
+                                  </ul>
+                              </div>
+                            </li>
+                            
+                            
+                            <li class="lnb-subitem" role="none">
+                                <button type="button" class="lnb-btn lnb-toggle-popup" role="menuitem" aria-controls="lnbmenu-5" aria-expanded="false" aria-haspopup="true" data-url="/egovframe-runtime/persistence-layer/mongodb/">
+                                  MongoDB<span class="sr-only">열기</span>
+                                </button>
+                              <div class="lnb-submenu-lv2 " id="lnbmenu-5" role="menu">
+                                <button type="button" class="lnb-btn-tit"  data-url="/egovframe-runtime/persistence-layer/">MongoDB</button>
+                                <ul>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/persistence-layer/mongodb/mongodb-supprot3_5_1/">MongoDB support</a>
+                                      
+                                    </li>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/persistence-layer/mongodb/mongodb-repositories3_5_1/">Repositories</a>
+                                      
+                                    </li>
+                                  </ul>
+                              </div>
+                            </li>
+                            
+                            
+                            <li class="lnb-subitem" role="none">
+                                <button type="button" class="lnb-btn lnb-toggle-popup" role="menuitem" aria-controls="lnbmenu-5" aria-expanded="false" aria-haspopup="true" data-url="/egovframe-runtime/persistence-layer/orm/">
+                                  ORM<span class="sr-only">열기</span>
+                                </button>
+                              <div class="lnb-submenu-lv2 " id="lnbmenu-5" role="menu">
+                                <button type="button" class="lnb-btn-tit"  data-url="/egovframe-runtime/persistence-layer/">ORM</button>
+                                <ul>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/persistence-layer/orm/orm-entities/">Entities</a>
+                                      
+                                    </li>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/persistence-layer/orm/orm-entity_operation/">Entity Operation</a>
+                                      
+                                    </li>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/persistence-layer/orm/orm-associaion_mapping/">Association Mapping</a>
+                                      
+                                    </li>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/persistence-layer/orm/orm-query-language/">Query Language</a>
+                                      
+                                    </li>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/persistence-layer/orm/orm-native_sql/">Native SQL</a>
+                                      
+                                    </li>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/persistence-layer/orm/orm-concurrency/">Concurrency</a>
+                                      
+                                    </li>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/persistence-layer/orm/orm-cache_handling/">Cache Handling</a>
+                                      
+                                    </li>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/persistence-layer/orm/orm-fetch_strategy/">Fetch Strategy</a>
+                                      
+                                    </li>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/persistence-layer/orm/orm-spring_integration/">Spring Integration</a>
+                                      
+                                    </li>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/persistence-layer/orm/orm-jpa_configuration/">JPA Configuration</a>
+                                      
+                                    </li>
+                                  </ul>
+                              </div>
+                            </li>
+                            
+                            
+                            <li class="lnb-subitem" role="none">
+                                <button type="button" class="lnb-btn lnb-toggle-popup" role="menuitem" aria-controls="lnbmenu-5" aria-expanded="false" aria-haspopup="true" data-url="/egovframe-runtime/persistence-layer/transaction/">
+                                  Transaction<span class="sr-only">열기</span>
+                                </button>
+                              <div class="lnb-submenu-lv2 " id="lnbmenu-5" role="menu">
+                                <button type="button" class="lnb-btn-tit"  data-url="/egovframe-runtime/persistence-layer/">Transaction</button>
+                                <ul>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/persistence-layer/transaction/declarative/">Declarative</a>
+                                      
+                                    </li>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/persistence-layer/transaction/programmatic/">Programmatic</a>
+                                      
+                                    </li>
+                                  </ul>
+                              </div>
+                            </li>
+                            
+                            
+                            <li class="lnb-subitem" role="none">
+                                <button type="button" class="lnb-btn lnb-toggle-popup" role="menuitem" aria-controls="lnbmenu-5" aria-expanded="false" aria-haspopup="true" data-url="/egovframe-runtime/persistence-layer/reactive/">
+                                  Reactive<span class="sr-only">열기</span>
+                                </button>
+                              <div class="lnb-submenu-lv2 " id="lnbmenu-5" role="menu">
+                                <button type="button" class="lnb-btn-tit"  data-url="/egovframe-runtime/persistence-layer/">Reactive</button>
+                                <ul>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/persistence-layer/reactive/reactive-r2dbc/">R2DBC</a>
+                                      
+                                    </li>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/persistence-layer/reactive/reactive-mongodb/">MongoDB</a>
+                                      
+                                    </li>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/persistence-layer/reactive/reactive-cassandra/">Cassandra</a>
+                                      
+                                    </li>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/persistence-layer/reactive/reactive-redis/">Redis</a>
+                                      
+                                    </li>
+                                  </ul>
+                              </div>
+                            </li>
+                            </ul>
+                    </div>
+                  
+              
+              <li class="lnb-item" role="none">
+                    <button type="button" class="lnb-btn lnb-toggle" role="menuitem" aria-controls="lnbmenu6" aria-expanded="false" data-url="/egovframe-runtime/integration-layer/">연계통합</button>
+                    <div class="lnb-submenu">
+                        <ul id="lnb-menu6" role="menu">
+                          
+                            
+                            <li class="lnb-subitem">
+                              <a href="/egovframe-runtime/integration-layer/naming-service/" class="lnb-btn lnb-link" role="menuitem">Naming Service</a>
+                            </li>
+                            
+                            
+                            <li class="lnb-subitem" role="none">
+                                <button type="button" class="lnb-btn lnb-toggle-popup" role="menuitem" aria-controls="lnbmenu-6" aria-expanded="false" aria-haspopup="true" data-url="/egovframe-runtime/integration-layer/integration-service/">
+                                  Integration Service<span class="sr-only">열기</span>
+                                </button>
+                              <div class="lnb-submenu-lv2 " id="lnbmenu-6" role="menu">
+                                <button type="button" class="lnb-btn-tit"  data-url="/egovframe-runtime/integration-layer/">Integration Service</button>
+                                <ul>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/integration-layer/integration-service/integration-service-metadata/">Metadata</a>
+                                      
+                                    </li>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/integration-layer/integration-service/integration-service-api/">API</a>
+                                      
+                                    </li>
+                                  </ul>
+                              </div>
+                            </li>
+                            
+                            
+                            <li class="lnb-subitem">
+                              <a href="/egovframe-runtime/integration-layer/webservice/" class="lnb-btn lnb-link" role="menuitem">WebService</a>
+                            </li>
+                            
+                            
+                            <li class="lnb-subitem">
+                              <a href="/egovframe-runtime/integration-layer/restful/" class="lnb-btn lnb-link" role="menuitem">Restful</a>
+                            </li>
+                            
+                            
+                            <li class="lnb-subitem">
+                              <a href="/egovframe-runtime/integration-layer/webservice/cloud-data-stream/" class="lnb-btn lnb-link" role="menuitem">Cloud Data Stream</a>
+                            </li>
+                            
+                            
+                            <li class="lnb-subitem">
+                              <a href="/egovframe-runtime/integration-layer/swagger/" class="lnb-btn lnb-link" role="menuitem">Swagger</a>
+                            </li>
+                            </ul>
+                    </div>
+                  
+              
+              <li class="lnb-item" role="none">
+                    <button type="button" class="lnb-btn lnb-toggle" role="menuitem" aria-controls="lnbmenu7" aria-expanded="false" data-url="/egovframe-runtime/batch-layer/">배치처리</button>
+                    <div class="lnb-submenu">
+                        <ul id="lnb-menu7" role="menu">
+                          
+                            
+                            <li class="lnb-subitem" role="none">
+                                <button type="button" class="lnb-btn lnb-toggle-popup" role="menuitem" aria-controls="lnbmenu-7" aria-expanded="false" aria-haspopup="true" data-url="/egovframe-runtime/batch-layer/intro/">
+                                  배치 실행환경 소개<span class="sr-only">열기</span>
+                                </button>
+                              <div class="lnb-submenu-lv2 " id="lnbmenu-7" role="menu">
+                                <button type="button" class="lnb-btn-tit"  data-url="/egovframe-runtime/batch-layer/">배치 실행환경 소개</button>
+                                <ul>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/batch-layer/intro/batch-core-sqllite/">SQLite</a>
+                                      
+                                    </li>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/batch-layer/intro/batch-support-logback_logging/">Logback logging</a>
+                                      
+                                    </li>
+                                  </ul>
+                              </div>
+                            </li>
+                            
+                            
+                            <li class="lnb-subitem" role="none">
+                                <button type="button" class="lnb-btn lnb-toggle-popup" role="menuitem" aria-controls="lnbmenu-7" aria-expanded="false" aria-haspopup="true" data-url="/egovframe-runtime/batch-layer/batch-core-job/">
+                                  Job<span class="sr-only">열기</span>
+                                </button>
+                              <div class="lnb-submenu-lv2 " id="lnbmenu-7" role="menu">
+                                <button type="button" class="lnb-btn-tit"  data-url="/egovframe-runtime/batch-layer/">Job</button>
+                                <ul>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/batch-layer/batch-core-job/batch-core-job_variable/">Job Variable</a>
+                                      
+                                    </li>
+                                  </ul>
+                              </div>
+                            </li>
+                            
+                            
+                            <li class="lnb-subitem" role="none">
+                                <button type="button" class="lnb-btn lnb-toggle-popup" role="menuitem" aria-controls="lnbmenu-7" aria-expanded="false" aria-haspopup="true" data-url="/egovframe-runtime/batch-layer/batch-core-step/">
+                                  Step<span class="sr-only">열기</span>
+                                </button>
+                              <div class="lnb-submenu-lv2 " id="lnbmenu-7" role="menu">
+                                <button type="button" class="lnb-btn-tit"  data-url="/egovframe-runtime/batch-layer/">Step</button>
+                                <ul>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/batch-layer/batch-core-step/batch-core-step_variable/">Step Variable</a>
+                                      
+                                    </li>
+                                  </ul>
+                              </div>
+                            </li>
+                            
+                            
+                            <li class="lnb-subitem">
+                              <a href="/egovframe-runtime/batch-layer/itemReader/" class="lnb-btn lnb-link" role="menuitem">ItemReader</a>
+                            </li>
+                            
+                            
+                            <li class="lnb-subitem">
+                              <a href="/egovframe-runtime/batch-layer/ItemWriter/" class="lnb-btn lnb-link" role="menuitem">ItemWriter</a>
+                            </li>
+                            
+                            
+                            <li class="lnb-subitem">
+                              <a href="/egovframe-runtime/batch-layer/resource_variable/" class="lnb-btn lnb-link" role="menuitem">Resource Variable</a>
+                            </li>
+                            
+                            
+                            <li class="lnb-subitem">
+                              <a href="/egovframe-runtime/batch-layer/batch-execution-job_repository/" class="lnb-btn lnb-link" role="menuitem">JobRepository</a>
+                            </li>
+                            
+                            
+                            <li class="lnb-subitem" role="none">
+                                <button type="button" class="lnb-btn lnb-toggle-popup" role="menuitem" aria-controls="lnbmenu-7" aria-expanded="false" aria-haspopup="true" data-url="/egovframe-runtime/batch-layer/batch-execution-job_launcher/">
+                                  JobLauncher<span class="sr-only">열기</span>
+                                </button>
+                              <div class="lnb-submenu-lv2 " id="lnbmenu-7" role="menu">
+                                <button type="button" class="lnb-btn-tit"  data-url="/egovframe-runtime/batch-layer/">JobLauncher</button>
+                                <ul>
+                                  
+                                      <li class="" role="none">
+                                      <a class="lnb-btn" role="menuitem" href="/egovframe-runtime/batch-layer/batch-execution-job_launcher/batch-execution-remote-job_launcher/">Remote JobLauncher</a>
+                                      
+                                    </li>
+                                  </ul>
+                              </div>
+                            </li>
+                            
+                            
+                            <li class="lnb-subitem">
+                              <a href="/egovframe-runtime/batch-layer/batch-execution-job_runner/" class="lnb-btn lnb-link" role="menuitem">JobRunner</a>
+                            </li>
+                            
+                            
+                            <li class="lnb-subitem">
+                              <a href="/egovframe-runtime/batch-layer/batch-core-job_registry/" class="lnb-btn lnb-link" role="menuitem">JobRegistry</a>
+                            </li>
+                            
+                            
+                            <li class="lnb-subitem">
+                              <a href="/egovframe-runtime/batch-layer/batch-core-job_explorer/" class="lnb-btn lnb-link" role="menuitem">JobExplorer</a>
+                            </li>
+                            
+                            
+                            <li class="lnb-subitem">
+                              <a href="/egovframe-runtime/batch-layer/batch-core-job_operator/" class="lnb-btn lnb-link" role="menuitem">JobOperator</a>
+                            </li>
+                            
+                            
+                            <li class="lnb-subitem">
+                              <a href="/egovframe-runtime/batch-layer/batch-core-skip_repeat_retry/" class="lnb-btn lnb-link" role="menuitem">Skip/Retry/Repeat</a>
+                            </li>
+                            
+                            
+                            <li class="lnb-subitem">
+                              <a href="/egovframe-runtime/batch-layer/batch-core-multidata_process/" class="lnb-btn lnb-link" role="menuitem">MultiDataProcessing</a>
+                            </li>
+                            
+                            
+                            <li class="lnb-subitem">
+                              <a href="/egovframe-runtime/batch-layer/batch-core-history_management/" class="lnb-btn lnb-link" role="menuitem">History Management</a>
+                            </li>
+                            
+                            
+                            <li class="lnb-subitem">
+                              <a href="/egovframe-runtime/batch-layer/batch-example-sync_async_v3.7/" class="lnb-btn lnb-link" role="menuitem">동기/비동기 처리 예제</a>
+                            </li>
+                            
+                            
+                            <li class="lnb-subitem">
+                              <a href="/egovframe-runtime/batch-layer/batch-core-listener/" class="lnb-btn lnb-link" role="menuitem">Listener</a>
+                            </li>
+                            
+                            
+                            <li class="lnb-subitem">
+                              <a href="/egovframe-runtime/batch-layer/batch-core-parallel_process/" class="lnb-btn lnb-link" role="menuitem">병행처리</a>
+                            </li>
+                            
+                            
+                            <li class="lnb-subitem">
+                              <a href="/egovframe-runtime/batch-layer/batch-core-code_base_exception/" class="lnb-btn lnb-link" role="menuitem">CodeBaseException</a>
+                            </li>
+                            
+                            
+                            <li class="lnb-subitem">
+                              <a href="/egovframe-runtime/batch-layer/batch-centercut-intro/" class="lnb-btn lnb-link" role="menuitem">센터 컷(CenterCut)</a>
+                            </li>
+                            
+                            
+                            <li class="lnb-subitem">
+                              <a href="/egovframe-runtime/batch-layer/batch-core-event_notice_template_mgmt/" class="lnb-btn lnb-link" role="menuitem">이벤트알림 템플릿 관리</a>
+                            </li>
+                            
+                            
+                            <li class="lnb-subitem">
+                              <a href="/egovframe-runtime/batch-layer/batch-core-flow_control/" class="lnb-btn lnb-link" role="menuitem">Flow Control</a>
+                            </li>
+                            </ul>
+                    </div>
+                  </li>
+      </ul>
+    
+      </ul>
+    
+      </ul>
+    
+</nav>
+            <div class="contents">
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+<nav class="krds-breadcrumb-wrap" aria-label="브레드크럼">
+  <ol class="breadcrumb">
+    <li class="home">
+      <a href="/" class="txt">Home</a>
+    </li>
+
+        
+          
+            <li><a href="/egovframe-runtime/" class="txt">실행환경</a></li>
+          
+        
+        
+        
+
+        
+          
+            <li><a href="/egovframe-runtime/foundation-layer/" class="txt">공통기반</a></li>
+          
+        
+        
+        
+
+        
+          
+        
+        
+        </ol>
+</nav>
+    <div class="conts-area">
+        
+            
+  
+  
+  
+
+  
+  
+    
+
+    
+    <div class="krds-in-page-navigation-area">
+      <nav class="in-page-navigation-action">
+        <ul>
+          <li><a href="https://github.com/swanpark8538/egovframe-docs/tree/contribution/egovframe-runtime/foundation-layer/ftp.md" class="krds-btn text small" target="_blank" rel="noopener"><i class="svg-icon ico_page_view"></i> 페이지 보기</a></li>
+          <li><a href="https://github.com/swanpark8538/egovframe-docs/edit/contribution/egovframe-runtime/foundation-layer/ftp.md" class="krds-btn text small" target="_blank" rel="noopener"><i class="svg-icon ico_page_edit"></i> 페이지 편집</a></li>
+          <li><a href="https://github.com/swanpark8538/egovframe-docs/issues/new?title=FTP%20Service" class="krds-btn text small" target="_blank" rel="noopener"><i class="svg-icon ico_issue"></i> 문서에 이슈 생성</a></li>
+            <li><a href="https://github.com/swanpark8538/egovframe-docs/issues/new" class="krds-btn text small" target="_blank" rel="noopener"><i class="svg-icon ico_issue"></i> 프로젝트에 이슈 생성</a></li>
+            </ul>
+      </nav>
+      
+  <div class="in-page-navigation-header">
+    <p class="quick-caption">이 페이지의 구성</p>
+    
+    <p class="quick-title">FTP Service</p>
+  </div>
+  
+    <nav class="in-page-navigation-list">
+  <ul>
+    <li><a href="#개요">개요</a>
+      <ul>
+        <li><a href="#ftp정의">FTP정의</a></li>
+      </ul>
+    </li>
+    <li><a href="#설명">설명</a>
+      <ul>
+        <li><a href="#apache-commons-net">Apache Commons Net™</a></li>
+      </ul>
+    </li>
+    <li><a href="#commons-net-2x-to-commons-net-30">Commons Net 2.x to Commons Net 3.0</a></li>
+    <li><a href="#참고자료">참고자료</a></li>
+  </ul>
+</nav>
+
+
+    </div>
+
+
+
+        
+        <div class="conts-wrap scroll-check">
+            
+                
+                    <h1 class="h-tit" id="ftp-service">FTP Service</h1>
+
+                
+            
+                
+                    <div class="conts-wrap section-link" id="section_01">
+                        <h2 class="sec-tit" id="개요">개요</h2>
+<p><strong>전자정부 표준프레임워크</strong>는 <!-- raw HTML omitted -->FTP<!-- raw HTML omitted --> 서비스제공을 위해 Apache Commons Net™ [단순 클라이언트측의 기본적인 Internet Protocol의 구현의 FTP기능을 편리하게 제공]을 오픈 소스로 채택하였다.</p>
+<p>Apache Commons Net™은 Network utility collection 이다.
+Apache Commons Net™은 단순 클라이언트측의 기본적인 Internet Protocol을 구현함으로서 기본적인 프로토콜 access가 목적이기 때문에 부분적으로 object-orient 규칙에 위배가 되는 사항이 있다는 것을 참고적으로 알고 있어야 한다.</p>
+<h3 class="sec-tit" id="ftp정의">FTP정의</h3>
+<p>FTP란 FTP (File Transfer Protocol) 파일 전송 프로토콜로 FTP[에프 티 피]는 인터넷상의 컴퓨터들 간에 파일을 교환하기 위한 표준 프로토콜로서 가장 간단한 방법이기도 하다.
+화면에 표시할 수 있는 웹 페이지와 관련 파일들을 전송하는 HTTP, 전자우편을 전송하는 SMTP 등과 같이, FTP 역시 인터넷의 TCP/IP 응용 프로토콜 중의 하나이다.
+FTP는 웹 페이지 파일들을 인터넷상에서 모든 사람이 볼 수 있도록 하기 위해 저작자의 컴퓨터로부터 서버로 옮기는 과정에서 사용된다.
+또한, 다른 서버들로부터 자신의 컴퓨터로 프로그램이나 파일들을 다운로드 하는 데에도 많이 사용된다.
+사용자 입장에서는 간단한 명령을 이용하여 FTP를 쓰거나, 또는 그래픽 사용자 인터페이스를 제공하는 상용 프로그램을 쓸 수도 있다.
+보통은 웹 브라우저도 웹 페이지로부터 선택한 프로그램을 다운로드 하는데 FTP를 사용한다.
+FTP를 사용하여 서버에 있는 파일을 지우거나 이름을 바꾸거나 옮기거나 복사하는 등 갱신작업을 할 수도 있다.
+FTP 서버에는 로그온을 해야하지만, 익명의 FTP를 사용하여 모든 사람들에게 공개된 파일들을 쉽게 접근할 수 있도록 하고 있다.
+FTP는 보통 TCP/IP에 함께 제공되는 일련의 프로그램 속에 포함되어 있다.</p>
+
+                    </div>
+                
+            
+                
+                    <div class="conts-wrap section-link" id="section_02">
+                        <h2 class="sec-tit" id="설명">설명</h2>
+<h3 class="sec-tit" id="apache-commons-net">Apache Commons Net™</h3>
+<p>Apache Commons Net™ 프로젝트(
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+    
+
+
+
+<a class="krds-btn medium text" href="http://commons.apache.org/net/">http://commons.apache.org/net/<i class="svg-icon ico-go"></i></a>
+
+
+)에서 지원하는 프로토콜은 다음과 같다.</p>
+<ul>
+<li><!-- raw HTML omitted -->FTP<!-- raw HTML omitted -->/FTPS</li>
+<li><!-- raw HTML omitted -->FTP<!-- raw HTML omitted --> over <!-- raw HTML omitted -->HTTP<!-- raw HTML omitted --> (experimental)</li>
+<li>NNTP</li>
+<li><!-- raw HTML omitted -->SMTP<!-- raw HTML omitted -->(S)</li>
+<li><!-- raw HTML omitted -->POP3<!-- raw HTML omitted -->(S)</li>
+<li><!-- raw HTML omitted -->IMAP<!-- raw HTML omitted -->(S)</li>
+<li>Telnet</li>
+<li>TFTP</li>
+<li>Finger</li>
+<li>Whois</li>
+<li>rexec/rcmd/rlogin</li>
+<li>Time (rdate) and Daytime</li>
+<li>Echo</li>
+<li>Discard</li>
+<li>NTP/SNTP</li>
+</ul>
+<p>Apache Commons Net - org.apache.commons.net.ftp 의 동작흐름에 대하여 간략히 설명한다.</p>
+<p>논리적 흐름도는 아래와 같다.</p>
+<pre tabindex="0"><code>1. FTP Client를 생성
+2. FTP Server에 Connect 서버에 연결한다
+3. 응답이 정상적인지 확인한다.
+4. FTP Server 로그인한다
+5. 접속하여 여러가지 작업(list, get, put....등등)
+6. FTP Server 로그아웃한다
+7. FTP Server disconnect
+</code></pre><p>다음은 사용예제는 FTP에 접속하여 리스트를 볼수 있는 예제이다.</p>
+<h4 id="사용예제">사용예제</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> FileInputStream inputStream;
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) {
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>	FTPClient client <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span>;
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// 계정 로그인</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>		client <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> FTPClient();
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">// 한글파일명 때문에 디폴트 인코딩을 euc-kr로 한다.</span>
+</span></span><span style="display:flex;"><span>		client.<span style="color:#a6e22e">setControlEncoding</span>(<span style="color:#e6db74">&#34;euc-kr&#34;</span>);
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">// Test 서버 정보</span>
+</span></span><span style="display:flex;"><span>		logger.<span style="color:#a6e22e">info</span>(<span style="color:#e6db74">&#34;Commons NET FTP Client Test Program&#34;</span>);
+</span></span><span style="display:flex;"><span>		logger.<span style="color:#a6e22e">info</span>(<span style="color:#e6db74">&#34;Start GO&#34;</span>);
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">// Novell TEST서버에 접속</span>
+</span></span><span style="display:flex;"><span>		client.<span style="color:#a6e22e">connect</span>(<span style="color:#e6db74">&#34;ftp.novell.com&#34;</span>);
+</span></span><span style="display:flex;"><span>		logger.<span style="color:#a6e22e">info</span>(<span style="color:#e6db74">&#34;Connected to ...........&#34;</span>);
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">// 응답코드가 비정상일 경우 종료함</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">int</span> reply <span style="color:#f92672">=</span> client.<span style="color:#a6e22e">getReplyCode</span>();
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>FTPReply.<span style="color:#a6e22e">isPositiveCompletion</span>(reply)) {
+</span></span><span style="display:flex;"><span>			client.<span style="color:#a6e22e">disconnect</span>();
+</span></span><span style="display:flex;"><span>			logger.<span style="color:#a6e22e">info</span>(<span style="color:#e6db74">&#34;FTP server refused connection&#34;</span>);
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>		} <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>			logger.<span style="color:#a6e22e">info</span>(client.<span style="color:#a6e22e">getReplyString</span>());
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>			<span style="color:#75715e">// timeout을 설정</span>
+</span></span><span style="display:flex;"><span>			client.<span style="color:#a6e22e">setSoTimeout</span>(10000);
+</span></span><span style="display:flex;"><span>			<span style="color:#75715e">// 로그인</span>
+</span></span><span style="display:flex;"><span>			client.<span style="color:#a6e22e">login</span>(<span style="color:#e6db74">&#34;anonymous&#34;</span>, <span style="color:#e6db74">&#34;anonymous&#34;</span>);
+</span></span><span style="display:flex;"><span>			logger.<span style="color:#a6e22e">info</span>(<span style="color:#e6db74">&#34;anonymous login success...&#34;</span>);
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>			<span style="color:#75715e">// 각종 정보를 처리 (Put / Get / Append등)</span>
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>			client.<span style="color:#a6e22e">logout</span>();
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>	} <span style="color:#66d9ef">catch</span> (Exception e) {
+</span></span><span style="display:flex;"><span>		logger.<span style="color:#a6e22e">info</span>(<span style="color:#e6db74">&#34;해당 ftp 로그인 실패하였습니다.&#34;</span>);
+</span></span><span style="display:flex;"><span>		e.<span style="color:#a6e22e">printStackTrace</span>();
+</span></span><span style="display:flex;"><span>		System.<span style="color:#a6e22e">exit</span>(<span style="color:#f92672">-</span>1);
+</span></span><span style="display:flex;"><span>	} <span style="color:#66d9ef">finally</span> {
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">if</span>(client <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">&amp;&amp;</span> client.<span style="color:#a6e22e">isConnected</span>()){
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>				client.<span style="color:#a6e22e">disconnect</span>();
+</span></span><span style="display:flex;"><span>			}<span style="color:#66d9ef">catch</span>(IOException ioe) {
+</span></span><span style="display:flex;"><span>				ioe.<span style="color:#a6e22e">printStackTrace</span>();
+</span></span><span style="display:flex;"><span>			}
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h4 id="파일-리스트-보기">파일 리스트 보기</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>FTPFile<span style="color:#f92672">[]</span> ftpfiles <span style="color:#f92672">=</span> client.<span style="color:#a6e22e">listFiles</span>(<span style="color:#e6db74">&#34;/&#34;</span>);
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> (ftpfiles <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span> ) {
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0; i <span style="color:#f92672">&lt;</span> ftpfiles.<span style="color:#a6e22e">length</span>; i<span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>		FTPFile file <span style="color:#f92672">=</span> ftpfiles<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span>;
+</span></span><span style="display:flex;"><span>		logger.<span style="color:#a6e22e">info</span>(file.<span style="color:#a6e22e">toString</span>()); <span style="color:#75715e">// 파일정보</span>
+</span></span><span style="display:flex;"><span>		logger.<span style="color:#a6e22e">info</span>(file.<span style="color:#a6e22e">getName</span>()); <span style="color:#75715e">// 파일명 </span>
+</span></span><span style="display:flex;"><span>		logger.<span style="color:#a6e22e">info</span>(file.<span style="color:#a6e22e">getSize</span>()); <span style="color:#75715e">// 파일사이즈</span>
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h4 id="파일-다운로드-get">파일 다운로드 (get)</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>File get_file <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> File(<span style="color:#e6db74">&#34;c:\\temp\\test.jpg&#34;</span>);
+</span></span><span style="display:flex;"><span>FileOutputStream outputstream <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> FileOutputStream(get_file);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">boolean</span> result <span style="color:#f92672">=</span> client.<span style="color:#a6e22e">retrieveFile</span>(<span style="color:#e6db74">&#34;/public/test.jpg&#34;</span>, outputstream);
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>outputstream.<span style="color:#a6e22e">close</span>();
+</span></span></code></pre></div><h4 id="파일-업로드-put">파일 업로드 (put)</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>File put_file <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> File(<span style="color:#e6db74">&#34;c:\\temp\\test.jpg&#34;</span>);
+</span></span><span style="display:flex;"><span>inputStream <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> FileInputStream(put_file);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">boolean</span> result <span style="color:#f92672">=</span> client.<span style="color:#a6e22e">storeFile</span>(<span style="color:#e6db74">&#34;/public/test.jpg&#34;</span>, inputStream);
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>inputStream.<span style="color:#a6e22e">close</span>();
+</span></span></code></pre></div><h4 id="파일-업로드-append">파일 업로드 (append)</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>File append_file <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> File(<span style="color:#e6db74">&#34;c:\\temp\\test.jpg&#34;</span>);
+</span></span><span style="display:flex;"><span>inputStream <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> FileInputStream(append_file);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">boolean</span> result <span style="color:#f92672">=</span> client.<span style="color:#a6e22e">appendFile</span>(<span style="color:#e6db74">&#34;/public/test.jpg&#34;</span>, inputStream);
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>inputStream.<span style="color:#a6e22e">close</span>();
+</span></span></code></pre></div><h4 id="파일-이름변경-rename">파일 이름변경 (rename)</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">boolean</span> result <span style="color:#f92672">=</span> client.<span style="color:#a6e22e">rename</span>(<span style="color:#e6db74">&#34;/public/바꾸기전.jpg&#34;</span>, <span style="color:#e6db74">&#34;/public/바꾼후.jpg&#34;</span>);
+</span></span></code></pre></div><h4 id="파일-삭제-delete">파일 삭제 (delete)</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">boolean</span> result <span style="color:#f92672">=</span> client.<span style="color:#a6e22e">deleteFile</span>(<span style="color:#e6db74">&#34;/public/삭제할.jpg&#34;</span>);
+</span></span></code></pre></div><h4 id="dircetory-생성">Dircetory 생성</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">boolean</span> result <span style="color:#f92672">=</span> client.<span style="color:#a6e22e">makeDirectory</span>(<span style="color:#e6db74">&#34;/public/test&#34;</span>);
+</span></span></code></pre></div><h4 id="os-커맨드-입력하기">OS 커맨드 입력하기</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>client.<span style="color:#a6e22e">sendCommand</span>(FTPCommand.<span style="color:#a6e22e">MAKE_DIRECTORY</span>,<span style="color:#e6db74">&#34;/public/test&#34;</span>);
+</span></span></code></pre></div><h4 id="파일-및-전송상태-설정">파일 및 전송상태 설정</h4>
+<ul>
+<li>파일 타입 : <!-- raw HTML omitted -->FTP<!-- raw HTML omitted -->.BINARY_FILE_TYPE, <!-- raw HTML omitted -->FTP<!-- raw HTML omitted -->.ASCII_FILE_TYPE, 등 설정 - 파일 전송 형태 : <!-- raw HTML omitted -->FTP<!-- raw HTML omitted -->.STREAM_TRANSFER_MODE, COMPRESSED_TRANSFER_MODE 등 설정</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">/* 파일 타입*/</span>
+</span></span><span style="display:flex;"><span>client.<span style="color:#a6e22e">setFileType</span>(FTP.<span style="color:#a6e22e">BINARY_FILE_TYPE</span>);
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">/* 파일 전송 형태 */</span>
+</span></span><span style="display:flex;"><span>client.<span style="color:#a6e22e">setFileTransferMode</span>(FTP.<span style="color:#a6e22e">COMPRESSED_TRANSFER_MODE</span>);
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">/* Mail - IMAP[S] Client 사용 */</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">IMAPMail</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">if</span> (args.<span style="color:#a6e22e">length</span> <span style="color:#f92672">&lt;</span> 3) {
+</span></span><span style="display:flex;"><span>          System.<span style="color:#a6e22e">err</span>.<span style="color:#a6e22e">println</span>(
+</span></span><span style="display:flex;"><span>              <span style="color:#e6db74">&#34;Usage: IMAPMail &lt;imap server hostname&gt; &lt;username&gt; &lt;password&gt; [TLS]&#34;</span>);
+</span></span><span style="display:flex;"><span>          System.<span style="color:#a6e22e">exit</span>(1);
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>      String server <span style="color:#f92672">=</span> args<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span>;
+</span></span><span style="display:flex;"><span>      String username <span style="color:#f92672">=</span> args<span style="color:#f92672">[</span>1<span style="color:#f92672">]</span>;
+</span></span><span style="display:flex;"><span>      String password <span style="color:#f92672">=</span> args<span style="color:#f92672">[</span>2<span style="color:#f92672">]</span>;
+</span></span><span style="display:flex;"><span>      String proto <span style="color:#f92672">=</span> (args.<span style="color:#a6e22e">length</span> <span style="color:#f92672">&gt;</span> 3) <span style="color:#f92672">?</span> args<span style="color:#f92672">[</span>3<span style="color:#f92672">]</span> : <span style="color:#66d9ef">null</span>;
+</span></span><span style="display:flex;"><span>      IMAPClient imap;
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">if</span> (proto <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span>) {
+</span></span><span style="display:flex;"><span>          System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Using secure protocol: &#34;</span> <span style="color:#f92672">+</span> proto);
+</span></span><span style="display:flex;"><span>          imap <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> IMAPSClient(proto, <span style="color:#66d9ef">true</span>); <span style="color:#75715e">// implicit</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>      } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>          imap <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> IMAPClient();
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>      System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Connecting to server &#34;</span> <span style="color:#f92672">+</span> server <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; on &#34;</span> <span style="color:#f92672">+</span> imap.<span style="color:#a6e22e">getDefaultPort</span>());
+</span></span><span style="display:flex;"><span>      imap.<span style="color:#a6e22e">setDefaultTimeout</span>(60000);
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e">// suppress login details</span>
+</span></span><span style="display:flex;"><span>      imap.<span style="color:#a6e22e">addProtocolCommandListener</span>(<span style="color:#66d9ef">new</span> PrintCommandListener(System.<span style="color:#a6e22e">out</span>, <span style="color:#66d9ef">true</span>));
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>          imap.<span style="color:#a6e22e">connect</span>(server);
+</span></span><span style="display:flex;"><span>      } <span style="color:#66d9ef">catch</span> (IOException e) {
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> RuntimeException(<span style="color:#e6db74">&#34;Could not connect to server.&#34;</span>, e);
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>imap.<span style="color:#a6e22e">login</span>(username, password)) {
+</span></span><span style="display:flex;"><span>              System.<span style="color:#a6e22e">err</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Could not login to server. Check password.&#34;</span>);
+</span></span><span style="display:flex;"><span>              imap.<span style="color:#a6e22e">disconnect</span>();
+</span></span><span style="display:flex;"><span>              System.<span style="color:#a6e22e">exit</span>(3);
+</span></span><span style="display:flex;"><span>          }
+</span></span><span style="display:flex;"><span>          imap.<span style="color:#a6e22e">setSoTimeout</span>(6000);
+</span></span><span style="display:flex;"><span>          imap.<span style="color:#a6e22e">capability</span>();
+</span></span><span style="display:flex;"><span>          imap.<span style="color:#a6e22e">select</span>(<span style="color:#e6db74">&#34;inbox&#34;</span>);
+</span></span><span style="display:flex;"><span>          imap.<span style="color:#a6e22e">examine</span>(<span style="color:#e6db74">&#34;inbox&#34;</span>);
+</span></span><span style="display:flex;"><span>          imap.<span style="color:#a6e22e">status</span>(<span style="color:#e6db74">&#34;inbox&#34;</span>, <span style="color:#66d9ef">new</span> String<span style="color:#f92672">[]</span>{<span style="color:#e6db74">&#34;MESSAGES&#34;</span>});
+</span></span><span style="display:flex;"><span>          imap.<span style="color:#a6e22e">logout</span>();
+</span></span><span style="display:flex;"><span>          imap.<span style="color:#a6e22e">disconnect</span>();
+</span></span><span style="display:flex;"><span>      } <span style="color:#66d9ef">catch</span> (IOException e) {
+</span></span><span style="display:flex;"><span>          System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(imap.<span style="color:#a6e22e">getReplyString</span>());
+</span></span><span style="display:flex;"><span>          e.<span style="color:#a6e22e">printStackTrace</span>();
+</span></span><span style="display:flex;"><span>          System.<span style="color:#a6e22e">exit</span>(10);
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">return</span>;
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div>
+                    </div>
+                
+            
+                
+                    <div class="conts-wrap section-link" id="section_03">
+                        <h2 class="sec-tit" id="commons-net-2x-to-commons-net-30">Commons Net 2.x to Commons Net 3.0</h2>
+<p>Version 3.0의 binary는 호환이 보장 되지만 소스코드는 아래와 같은 내용이 변경되었다.</p>
+<p>사용되지 않는 여러 상수들이 제거되었으며, binary 호환성에 영향을 주지않는 exception, public methods 들은 더이상 IOException 을 throw 하지 않도록 보완/수정되었다.</p>
+<ul>
+<li>TelnetClient#addOptionHandler(TelnetOptionHandler)</li>
+<li>TelnetClient#deleteOptionHandler(int)</li>
+</ul>
+
+                    </div>
+                
+            
+                
+                    <div class="conts-wrap section-link" id="section_04">
+                        <h2 class="sec-tit" id="참고자료">참고자료</h2>
+<p>
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+    
+
+
+
+<a class="krds-btn medium text" href="http://commons.apache.org/net/">Jakarta Commons Net<i class="svg-icon ico-go"></i></a>
+
+
+</p>
+
+                    </div>
+                
+            
+        </div>
+    </div>
+
+            </div>
+            
+          </div>
+          <button class="page-top-button krds-tooltip active" type="button" data-tooltip="페이지 상단으로 이동" aria-labelledby="tooltip-popover-0aha8scb"><i class="svg-icon ico-go-top"></i></button>
+      </div>
+  </main>
+  <footer id= "krds-footer">
+    <div class="inner">
+	<div class="f-logo"></div>
+	<div class="f-cnt">
+		<div class="f-info">
+			<ul class="info-cs">
+				<li><strong class="strong">대표전화</strong><span class="span">&nbsp; 1566-3598 (070-4448-2678)</span></li>
+				<li><strong class="strong">대표문의메일</strong><span class="span">&nbsp; egovframesupport@gmail.com</span></li>
+			</ul>
+		</div>
+		<div class="f-link">
+			<div class="link-go">
+				<a href="https://www.egovframe.go.kr/" class="krds-btn medium text" target="_blank" title="새 창 열림">전자정부 표준프레임워크 <i class="svg-icon ico-go"></i></a>
+				<a href="https://github.com/swanpark8538/egovframe-docs" class="krds-btn medium text" target="_blank" title="새 창 열림">Git <i class="svg-icon ico-go"></i></a>
+			</div>
+		</div>
+	</div>
+	<div class="f-btm">
+		<div class="f-btm-text">
+			<div class="f-menu">
+				<a href="https://github.com/eGovFramework/egovframe-docs?tab=readme-ov-file" class="krds-btn small text">이용 안내</a>
+				<a href="https://www.egovframe.go.kr/home/sub.do?menuNo=23" class="krds-btn small text">라이센스</a>
+			</div>
+			<p class="f-copy">COPYRIGHT (C) 2024 eGovFramework. ALL RIGHTS RESERVED.</p>
+		</div>
+	</div>
+</div>
+  </footer>
+</body>
+</html>
