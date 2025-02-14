@@ -68,7 +68,7 @@
   mask-image: url(../img/component/icon/ico_angle_disabled.svg);
   -webkit-mask-image: none;
   mask-image: none;
-  background-image: url(../../img/component/icon/ico_angle_disabled.svg);
+  background-image: url(../img/component/icon/ico_angle_disabled.svg);
   background-color: transparent !important;
   background-size: contain;
   background-repeat: no-repeat;
@@ -316,7 +316,7 @@
   mask-image: url(../img/component/icon/ico_delete_fill.svg);
   -webkit-mask-image: none;
   mask-image: none;
-  background-image: url(../../img/component/icon/ico_delete_fill.svg);
+  background-image: url(../img/component/icon/ico_delete_fill.svg);
   background-color: transparent !important;
   background-size: contain;
   background-repeat: no-repeat;
@@ -413,7 +413,7 @@
   mask-image: url(../img/component/icon/ico_help.svg);
   -webkit-mask-image: none;
   mask-image: none;
-  background-image: url(../../img/component/icon/ico_help.svg);
+  background-image: url(../img/component/icon/ico_help.svg);
   background-color: transparent !important;
   background-size: contain;
   background-repeat: no-repeat;
@@ -472,7 +472,7 @@
   mask-image: url(../img/component/icon/ico_success_fill.svg);
   -webkit-mask-image: none;
   mask-image: none;
-  background-image: url(../../img/component/icon/ico_success_fill.svg);
+  background-image: url(../img/component/icon/ico_success_fill.svg);
   background-color: transparent !important;
   background-size: contain;
   background-repeat: no-repeat;
@@ -490,7 +490,7 @@
   mask-image: url(../img/component/icon/ico_information_fill.svg);
   -webkit-mask-image: none;
   mask-image: none;
-  background-image: url(../../img/component/icon/ico_information_fill.svg);
+  background-image: url(../img/component/icon/ico_information_fill.svg);
   background-color: transparent !important;
   background-size: contain;
   background-repeat: no-repeat;
@@ -508,7 +508,7 @@
   mask-image: url(../img/component/icon/ico_error_fill.svg);
   -webkit-mask-image: none;
   mask-image: none;
-  background-image: url(../../img/component/icon/ico_error_fill.svg);
+  background-image: url(../img/component/icon/ico_error_fill.svg);
   background-color: transparent !important;
   background-size: contain;
   background-repeat: no-repeat;
@@ -526,7 +526,7 @@
   mask-image: url(../img/component/icon/ico_complete_fill.svg);
   -webkit-mask-image: none;
   mask-image: none;
-  background-image: url(../../img/component/icon/ico_complete_fill.svg);
+  background-image: url(../img/component/icon/ico_complete_fill.svg);
   background-color: transparent !important;
   background-size: contain;
   background-repeat: no-repeat;
@@ -797,7 +797,7 @@
   mask-image: url(../img/component/icon/ico_flag.svg);
   -webkit-mask-image: none;
   mask-image: none;
-  background-image: url(../../img/component/icon/ico_flag.svg);
+  background-image: url(../img/component/icon/ico_flag.svg);
   background-color: transparent !important;
   background-size: contain;
   background-repeat: no-repeat;
@@ -826,12 +826,12 @@
 }
 
 [data-krds-mode=high-contrast] .svg-icon.ico-help {
-  background-image: url(../../img/component/icon/ico_help_fill.svg);
+  background-image: url(../img/component/icon/ico_help_fill.svg);
 }
 
 @media (prefers-color-scheme: dark) {
   [data-krds-mode=theme] .svg-icon.ico-help {
-    background-image: url(../../img/component/icon/ico_help_fill.svg);
+    background-image: url(../img/component/icon/ico_help_fill.svg);
   }
 }
 
