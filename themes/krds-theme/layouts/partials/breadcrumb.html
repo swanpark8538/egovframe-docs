@@ -22,7 +22,9 @@
 <nav class="krds-breadcrumb-wrap" aria-label="브레드크럼">
   <ol class="breadcrumb">
     <li class="home">
-      <a href='{{ "/" | absURL }}' class="txt">Home</a>
+      {{/* 자꾸 "{{ '/' | absURL}}" 이렇게 하니까 baseURL(=https://egovframework.github.io/egovframe-docs/) 무시하고 '/' 이것 때문에 root경로?(=https://egovframework.github.io/)로 인식헤서,
+           Hugo의 site 변수를 사용해서 아래처럼 수정  */}}
+      <a href="{{ .Site.BaseURL }}" class="txt">Home</a>
     </li>    
     {{- $currentPath := "/" -}}
     {{- range $index, $part := $urlParts -}}
@@ -33,7 +35,8 @@
 
         {{ if $page}}
           {{if ne $url $page.RelPermalink}}
-            <li><a href="{{ $currentPath | absURL }}" class="txt">{{ $partName }}</a></li>
+            {{/* "{{ $currentPath | absURL }}" 이게 자꾸 baseURl을 무시해서, 아래처럼 수정*/}}
+            <li><a href="{{ .Site.BaseURL }}{{ $currentPath }}" class="txt">{{ $partName }}</a></li>
           {{ end }}
         {{ end }}
         
