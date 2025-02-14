@@ -1,8 +1,13 @@
 ---
-linkTitle: JobReuse
-weight: 19
 title: 기존 업무 재사용 예제
+linkTitle: JobReuse
 description: 기존 업무를 배치의 ItemReader나 ItemWriter로 사용한 예제이다. 스프링 배치에서 제공하는 Item의 Adapter를 사용하면 XML설정만으로도 기존 업무를 손쉽게 사용할 수 있다. 스프링 배치에서 제공하는 Adapter 중에 ItemReaderAdapter와 PropertyExtractingDelegatingItemWriter클래스를 사용하여 기존 업무를 사용하는 기능을 예제로 제공한다.
+url: /runtime-example/individual-example/batch-layer/batch-example-job_reuse/
+menu:
+    depth:
+        name: JobReuse
+        weight: 15
+        parent: "batchLayer"
 ---
 # 기존 업무 재사용 예제
 
@@ -124,7 +129,7 @@ public class EgovDelegatingJobFunctionalTests {
 ### 결과 확인
 콘솔창의 로그를 통해 배치 작업시 기존업무를 재사용한 결과를 확인할 수 있다.
 
-![delegate_output](../images/delegate_output.png)
+![delegate_output](./images/delegate_output.png)
 
 ## 참고자료
 - [http://static.springsource.org/spring-batch/reference/html/readersAndWriters.html#reusingExistingServices](http://static.springsource.org/spring-batch/reference/html/readersAndWriters.html#reusingExistingServices)

@@ -1,8 +1,13 @@
 ---
-linkTitle: PrePostProcess
-weight: 6
 title: 작업 전후처리 예제
+linkTitle: PrePostProcess
 description: 전자정부 표준프레임워크에서 배치 수행시, Core에서 제공하는 Processor 클래스를 이용하여 Job과 그 하위 구성요소인 Step, Chunk 전후에 적절한 선행/후행 처리 과정을 보여주는 예제이다.
+url: /runtime-example/individual-example/batch-layer/batch-example-pre_post_process_mgmt/
+menu:
+    depth:
+        name: PrePostProcess
+        weight: 6
+        parent: "batchLayer"
 ---
 # 작업 전후처리 예제
 
@@ -157,7 +162,7 @@ public class EgovPreProcessorFunctionalTests extends EgovAbstractIoSampleTests {
 ### 결과 확인
 이 예제의 테스트 결과는 배치수행 결과만 반영하므로, 전처리/후처리 성공여부는 콘솔창에서 로그내용을 검색하여 해당 로그의 출력여부로 확인할 수 있다.
 
-![preprocessor1](../images/preprocessor1.png)
+![preprocessor1](./images/preprocessor1.png)
 
 ## 참고자료
 - [Listener](../../../egovframe-runtime/batch-layer/batch-core-listener.md)

@@ -1,8 +1,14 @@
 ---
-linkTitle: "Integration Service"
-weight: 2
 title: Integration 서비스
+linkTitle: "Integration Service"
 description: Integration 서비스는 전자정부 개발프레임워크 기반의 시스템이 타 시스템과의 연계를 위해 사용하는 Interface의 표준을 정의한 것이다.
+url: /egovframe-runtime/integration-layer/integration-service/
+menu:
+    depth:
+        name: Integration Service
+        weight: 2
+        parent: "integration-layer"
+        identifier: "integration-service"
 ---
 # Integration 서비스
 
@@ -20,7 +26,7 @@ Integration 서비스는 전자정부 개발프레임워크 기반의 시스템�
 
 Integration 서비스를 사용하여 구현된 전자정부 시스템의 아키텍처는 다음과 같다.
 
-![Integration Service Architecture](../images/integration_service_architecture_wbg.png)
+![Integration Service Architecture](./images/integration_service_architecture_wbg.png)
 
 Integration 서비스는 연계 서비스 요청 Interface, 연계 서비스 제공 Interface, 연계 메시지 및 메시지 헤더 등을 정의하고 있으며, 연계 서비스 요청 모듈 및 제공 모듈은 연계 Adaptor나 연계 솔루션과 관계 없이 Integration 서비스가 제공하는 Interface와 Class만을 사용하여 연계 업무를 수행할 수 있다. Integration 서비스는 연계 Interface 외에 연계에 필요한 정보를 담기 위한 Metadata를 정의하고 있다. Metadata는 연계 Interface를 사용하기 위해 필요한 최소한의 정보(연계 기관 정보, 연계 시스템 정보, 연계 서비스 정보, 메시지 형식 등)을 정의하고 있다.
 

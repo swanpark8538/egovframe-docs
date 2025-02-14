@@ -1,8 +1,13 @@
 ---
-linkTitle: "- Step Variable"
-weight: 7
 title: Step Variable
+linkTitle: "Step Variable"
 description: EgovStepVariableListener를 통해 변수를 선언하고 여러 Step에서 사용자 정의 변수를 공유하여 사용할 수 있는 기능을 지원한다. 이를 통해 배치 실행 중 여러 Step에서 변수를 공유하며 사용할 수 있다.
+url: "/egovframe-runtime/batch-layer/batch-core-step/batch-core-step_variable/"
+menu:
+    depth:
+        name: Step Variable
+        weight: 1
+        parent: "step"
 ---
 # Step Variable
 
@@ -11,7 +16,7 @@ description: EgovStepVariableListener를 통해 변수를 선언하고 여러 St
 변수 선언 후 Listeners를 통해서 모든 Setp에서 사용자 정의 변수를 사용할 수 있도록 EgovStepVariableListener를 통해서 지원한다.
 사용자가 변수를 정의하여 여러 step에서 해당 변수를 공유하여 사용 가능한 기능으로 이루어져있다.
 
-![step-variable-architecture6](images/step-variable-architecture6.png)
+![step-variable-architecture6](./images/step-variable-architecture6.png)
 
 ## 설명
 

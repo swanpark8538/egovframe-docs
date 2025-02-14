@@ -1,8 +1,13 @@
 ---
-linkTitle: JdbcPaging
-weight: 21
 title: JdbcPaging 예제
+linkTitle: JdbcPaging
 description: DB를 페이지단위로 읽어서 데이터처리를 수행하는 기능을 예제로 제공한다. 스프링 배치에서는 JdbcPagingItemReader,JpaPagingItemReader등을 제공한다.또한 paging쿼리를 제공하는 인터페이스 PagingQueryProvider를 제공하며 각 DB종류별로 OraclePagingQueryProvider, HsqlPagingQueryProvider, MySqlPagingQueryProvider, SqlServerPagingQueryProvider, SybasePagingQueryProvider 등의 구현클래스를 제공한다.
+url: /runtime-example/individual-example/batch-layer/batch-example-multi-db_jdbcpaging/
+menu:
+    depth:
+        name: JdbcPaging
+        weight: 17
+        parent: "batchLayer"
 ---
 # JdbcPaging 예제
 
@@ -146,11 +151,11 @@ public abstract class EgovAbstractIoSampleTests {
 ### 결과 확인
 1.DB의 페이징 처리는 콘솔로그의 쿼리를 통해 확인할 수 있다. 위의 설정에서 pagesize가 2이므로, reader가 DB로 부터 데이터를 읽을 때 하나의 데이터가 아닌 2개의 데이터를 읽어온다.
 
-![jdbcpaging_cs](../images/jdbcpaging_cs.png)
+![jdbcpaging_cs](./images/jdbcpaging_cs.png)
 
 2.DB의 Customer 테이블의 credit의 값을 살펴보면 Job이 실행되면서 수정된 것을 확인 할 수 있다.
 
-![jdbcpaging_data](../images/jdbcpaging_data.png)
+![jdbcpaging_data](./images/jdbcpaging_data.png)
 
 ## 참고자료
 - [JdbcPagingItemReader](./batch-core-item_reader.md)

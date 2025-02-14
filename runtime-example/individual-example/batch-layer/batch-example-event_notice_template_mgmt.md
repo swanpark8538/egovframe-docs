@@ -1,8 +1,13 @@
 ---
-linkTitle: "EventNotice"
-weight: 3
 title: 이벤트알림 템플릿(Template) 예제
+linkTitle: "EventNotice"
 description: 전자정부 표준프레임워크의 배치 수행중 특정시점에 이벤트가 발생하는 경우 EventNoticeTrigger를 활용하여 SMS, Email 등을 통해 사용자가 설정한 관련정보를 발신하는 과정을 보여주는 예제이다. EgovEventNoticeTriggerFunctionalTests 예제는 일반 파일을 처리하는 과정에서 특정시점(Step 수행 시)에 배치수행과 관련한 내용을 Email로 보내주는 과정을 보여주는 과정을 보여준다.
+url: /runtime-example/individual-example/batch-layer/batch-example-event_notice_template_mgmt/
+menu:
+    depth:
+        name: EventNotice
+        weight: 3
+        parent: "batchLayer"
 ---
 # 이벤트알림 템플릿(Template) 예제
 
@@ -189,10 +194,10 @@ public class EgovEventNoticeTriggerFunctionalTests extends EgovAbstractIoSampleT
 ### 결과 확인
 이 예제의 테스트 결과는 배치수행 결과만 반영하므로, 이벤트알림의 성공여부는 실제 메일계정에 접속하여 Email 수신여부로 판단한다.
 
-![eventnoticetrigger1](../images/eventnoticetrigger1.png)
+![eventnoticetrigger1](./images/eventnoticetrigger1.png)
 
 ## 참고자료
-- [이벤트알림 템플릿 관리](../../../egovframe-runtime/batch-layer/batch-core-event_notice_template_mgmt.md)
+- [이벤트알림 템플릿 관리](/egovframe-runtime/batch-layer/batch-core-event_notice_template_mgmt.md)
 - SMTP 서버
   - naver SMTP 서버 : smtp.naver.com
   - daum SMTP 서버 : smtp.hanmail.net

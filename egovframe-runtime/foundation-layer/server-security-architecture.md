@@ -1,8 +1,13 @@
 ---
-linkTitle: "- Architecture"
-weight: 2
 title: Architecture
+linkTitle: "Architecture"
 description: 전자정부 개발프레임워크의 Spring Security는 DB 기반의 실시간 인증을 사용하며, 주요 구성요소로 Scheduler, Job, JobDetail, Trigger가 있다. Security 설정은 DelegatingFilterProxy를 통해 모든 웹 요청을 관리하며, 사용자 테이블과 권한 테이블을 포함한 여러 테이블이 보안 정보 관리에 사용된다. Spring과 Quartz의 통합으로 스케줄링된 작업을 관리하며, 다양한 설정 파일을 통해 자원과 역할을 보호한다.
+url: /egovframe-runtime/foundation-layer/server-security/server-security-architecture/
+menu:
+    depth:
+        name: Server Security Architecture
+        weight: 1
+        parent: "serverSecurity"
 ---
 # Architecture
 
@@ -32,9 +37,11 @@ description: 전자정부 개발프레임워크의 Spring Security는 DB 기반�
 
 #### Spring Security Filter Chain
 
-![image](./images/server_security_filterchain흐름_wbg.png)
-![image](./images/server_security_filterchain흐름_http요청_wbg.png)
-![image](./images/server_security_authenticationprocessingfilter_wbg.png)
+![server security Filter Chain 흐름](./images/server_security_filterchain흐름_wbg.png)
+
+![server security Filter Chain 흐름 (HTTP요청)](./images/server_security_filterchain흐름_http요청_wbg.png)
+
+![server security Authentication Processing Filter](./images/server_security_authenticationprocessingfilter_wbg.png)
 
 - Spring Security에서 생성한 정보 - SecurityContextHoler를 이용하여 SecurityContext 얻음
 - 응용프로그램이 분산되어 있는 경우 등 다양한 환경에서 사용 가능토록 SecurityContext를 SecurityContextHolder 내부에 생성한 ThreadLocal 객체를 이용하여 저장하고 있음.

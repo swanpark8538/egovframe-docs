@@ -1,8 +1,13 @@
 ---
-linkTitle: SpEL
-weight: 22
 title: "Spring Expression Language(SpEL)"
+linkTitle: SpEL
 description: Spring 3.0에서 도입된 SpEL은 빈 오브젝트에 접근해 프로퍼티 값을 동적으로 가져오는 표현식 언어로, JSP에서도 `<spring:eval>` 태그로 적용할 수 있다.
+url: /egovframe-runtime/foundation-layer-core/spel/
+menu:
+  depth:
+    name: SpEL
+    weight: 4
+    parent: "foundation-layer-core"
 ---
 # Spring Expression Language(SpEL)
 
@@ -109,7 +114,7 @@ private Integer money;
 <spring:eval expression='new java.text.DecimalFormat("###,##0").format(price)'/>
 ```
 
- ![image](../images/egovframework-rte2-ptl-spel1.jpg)![image](../images/egovframework-rte2-ptl-spel3.jpg)
+ ![image](./images/egovframework-rte2-ptl-spel1.jpg)![image](./images/egovframework-rte2-ptl-spel3.jpg)
 
 ## 참고자료
 

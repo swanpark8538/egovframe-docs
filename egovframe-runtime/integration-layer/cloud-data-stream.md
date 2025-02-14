@@ -1,8 +1,13 @@
 ---
-linkTitle: "Stream"
-weight: 7
 title: Cloud Data Stream
+linkTitle: "Stream"
 description: Spring Cloud Stream은 확장 가능한 이벤트 기반 마이크로서비스를 구축하기 위한 프레임워크로, 외부 메시징 시스템과 애플리케이션 코드를 연결하는 바인더 및 바인딩 기능을 제공한다. 생산자와 소비자는 메시지를 통해 통신하며, Spring Integration의 메시지 처리 기능을 활용한다. Spring Boot 기반의 Binder 구현체를 통해 이기종 시스템 간에도 메시지 처리가 가능하다.
+url: /egovframe-runtime/integration-layer/webservice/cloud-data-stream/
+menu:
+    depth:
+        name: Cloud Data Stream
+        weight: 5
+        parent: "integration-layer"
 ---
 # Cloud Data Stream
 
@@ -26,7 +31,7 @@ Spring Cloud Stream은 Spring Integration의 메시지 처리 핵심 기능을 �
 
 ### Data Stream , Batch 비교
 
-![Data Stream vs Batch](../images/datastream_vs_batch.png)
+![Data Stream vs Batch](./images/datastream_vs_batch.png)
 
 | 배치 처리 | 비동기 데이터 처리 |
 | --- | --- |

@@ -1,8 +1,13 @@
 ---
-linkTitle: "WebService"
-weight: 5
 title: WebService
+linkTitle: "WebService"
 description: WebService는 전자정부 개발프레임워크 Integration 서비스 표준에 따라 WebService를 요청하고 제공하기 위한 Library이다.
+url: /egovframe-runtime/integration-layer/webservice/
+menu:
+    depth:
+        name: WebService
+        weight: 3
+        parent: "integration-layer"
 ---
 # WebService
 
@@ -16,7 +21,7 @@ WebService는 전자정부 개발프레임워크 Integration 서비스 표준에
 
 W3C는 Web Service를 “네트워크 상에서 발생하는 컴퓨터 간의 상호작용을 지원하기 위한 소프트웨어 시스템”으로 정의하고 있다. 일반적으로 Web Service는 인터넷과 같은 네트워크 상에서 접근되고, 요청된 서비스를 제공하는 원격 시스템에서 수행되는 Web APIs이다.
 
-![WebService](../images/web_service_wbg.png)
+![WebService](./images/web_service_wbg.png)
 
 - 참조 : https://en.wikipedia.org/wiki/Web_service
 
@@ -36,7 +41,7 @@ WebService는 연계 서비스를 요청하고 제공하기 위한 Web Service C
 
 #### 물리ERD
 
-![WebService Metadata](../images/webservice_metadata_2.png)
+![WebService Metadata](./images/webservice_metadata_2.png)
 
 | <center>Table</center> | <center>설명</center> |
 | --- | --- |

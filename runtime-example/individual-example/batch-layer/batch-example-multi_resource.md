@@ -1,8 +1,13 @@
 ---
-linkTitle: MultiResource
-weight: 20
 title: MultiResource 예제
+linkTitle: MultiResource
 description: 한 step에서 여러개의 파일을 처리하는 기능을 예제로 제공한다. 스프링 배치에서는 MultiResourceItemReader와 MultiResourceItemWriter를 제공한다.
+url: /runtime-example/individual-example/batch-layer/batch-example-multi-resource/
+menu:
+    depth:
+        name: MultiResource
+        weight: 16
+        parent: "batchLayer"
 ---
 # MultiResource 예제
 
@@ -79,7 +84,7 @@ key: input.file.path
 value : /egovframework/data/input/delimited*.csv"
 ```
 
-![mutiresource](../images/mutiresource.png)
+![mutiresource](./images/mutiresource.png)
 
 Job 설정의 xml를 살펴보면 MultiResourceWriter의 resource는 output.file.path의 키값으로 지정된 jobParameter의 value이다. 해당 값은 아래의 Junit 테스트케이스 파일에서 확인할 수 있으며, 파일들은 테스트 후에 확인할 수 있다.
 
@@ -171,7 +176,7 @@ public abstract class EgovAbstractIoSampleTests {
 ### 결과확인
 MultiReourceWriter의 결과로 여러 파일이 생성되었는지를 확인한다.
 
-![mutiresource_output](../images/mutiresource_output.png)
+![mutiresource_output](./images/mutiresource_output.png)
 
 ## 참고자료
 - [multidata_process](../../../egovframe-runtime/batch-layer/batch-core-multidata_process.md)

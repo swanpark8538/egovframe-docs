@@ -1,8 +1,13 @@
 ---
-linkTitle: "- DbPartition"
-weight: 14
 title: DB 파티셔닝 예제
+linkTitle: "DbPartition"
 description: DB 파티셔닝 예제에서 EgovColumnRangePartitioner를 사용해 지정된 gridSize만큼 Master Step을 파티셔닝하며, fileNameListener는 입력 리소스명을 기반으로 출력 리소스명을 설정한다. 입력 리소스가 없을 경우 기본값으로 출력 위치와 파일명을 지정한다.
+url: /runtime-example/individual-example/batch-layer/batch-example-multi_process/batch-example-db_partition/
+menu:
+  depth:
+    name: DbPartition
+    weight: 1
+    parent: "multiProcess"
 ---
 # DB 파티셔닝 예제
 
@@ -153,6 +158,6 @@ public void testUpdateCredit() throws Exception {
 생성된 파일의 결과를 확인한다.
 배치 수행 결과, DB 데이터를 gridSize로 나뉘어 처리된 결과를 확인할 수 있다.
 
- ![dbpartition1](../images/dbpartition1.png)
+ ![dbpartition1](./images/dbpartition1.png)
 
 

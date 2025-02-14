@@ -1,8 +1,13 @@
 ---
-linkTitle: "Mail"
-weight: 29
 title: Mail 서비스
+linkTitle: "Mail"
 description: Jakarta Commons Email API를 사용하여 메일 발송을 쉽게 처리하며, 텍스트 메일, 파일 첨부, URL 첨부, HTML 메일, 인증 처리 등의 기능을 제공한다. 이를 통해 간단한 코드로 다양한 형식의 메일 발송을 구현할 수 있다.
+url: /egovframe-runtime/foundation-layer/mail/
+menu:
+    depth:
+        name: Mail 서비스
+        weight: 14
+        parent: "foundation-layer"
 ---
 # Mail 서비스
 
@@ -204,7 +209,7 @@ src 폴더 아래에 Index.jsp를 선택하여 마우스 오른쪽 클릭하여 
 
 ##### 샘플 utilappSample의 Index.jsp 실행하였을 경우 브라우져에서 실행되는 화면
 
-![mail-sample-browser-sceenshot](../images/mail-service-browser-screenshot.png)
+![mail-sample-browser-sceenshot](./images/mail-service-browser-screenshot.png)
 
 ## 참고 자료
 

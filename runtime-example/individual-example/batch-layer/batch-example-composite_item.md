@@ -1,8 +1,13 @@
 ---
-linkTitle: CompositeItem
-weight: 26
 title: CompositeItem 예제
+linkTitle: CompositeItem
 description: 서로 다른 유형으로 업무 처리하는 예제로 스프링 배치에서는 CompositeItemProcessor와 CompositeItemWriter를 제공한다. CompositeItemWriter를 사용하여 서로 다른 타입의 writer로 업무를 처리하는 기능을 예제로 제공한다.
+url: /runtime-example/individual-example/batch-layer/batch-example-multi-composite_item/
+menu:
+    depth:
+        name: CompositeItem
+        weight: 22
+        parent: "batchLayer"
 ---
 # CompositItem 예제
 
@@ -169,7 +174,7 @@ public class EgovCompositeItemWriterSampleFunctionalTests {
 ### 결과 확인
 위의 테스트의 결과인 DB의 Trade테이블과 파일들이 생성되었는지를 확인한다.
 
-![compositewriter_datadb](../images/compositewriter_datadb.png)
+![compositewriter_datadb](./images/compositewriter_datadb.png)
 
 ## 참고자료
 - [multidata_process](../../egovframe-runtime/batch-layer/batch-core-multidata_process.md)

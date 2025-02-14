@@ -1,8 +1,13 @@
 ---
-linkTitle: "XML Manipulation"
-weight: 23
 title: XML Manipulation Service
+linkTitle: "XML Manipulation"
 description: XML Manipulation 서비스는 XML 문서의 생성, 읽기, 쓰기, 수정 등을 위한 기능을 제공하며, DOM과 SAX 두 가지 파서 방식을 지원한다. DOM은 트리 구조로 XML 문서를 다루고, SAX는 이벤트 기반으로 처리한다. 이 서비스를 통해 XML 문서의 요소 추가, 삭제, 수정, XPath 검색 및 Validation 검사 등의 작업을 수행할 수 있다.
+url: /egovframe-runtime/foundation-layer/xml-manipulation/
+menu:
+    depth:
+        name: XML Manipulation
+        weight: 10
+        parent: "foundation-layer"
 ---
 # XML Manipulation Service
 
@@ -23,7 +28,7 @@ XML 문서를 읽어 들이는 역할을 수행하는 파서는 두 가지 종�
 
 XML 문서는 **요소(element)**,**속성(attribute)**,**Text** 등으로 구성된 트리 구조의 계층적인 정보이다. ⇒DOM을 이용하면 XML 문서의 각 요소들에 대하여 트리 구조의 객체를 읽어 들인다. DOM은 XML 문서를 나타내는 각각의 객체들에 대한 표준 인터페이스이다. DOM 파서는 XML 문서로부터 DOM 구조를 생성하는 역할을 한다.
 
-![xml-manipulation-service-dom](../images/xml-manipulation-service-dom.png)
+![xml-manipulation-service-dom](./images/xml-manipulation-service-dom.png)
 
 
 ##### Sample Source
@@ -168,7 +173,7 @@ XML 문서를 읽어 들이는 응용 프로그램 API 로서 XML 문서를 하�
 
 ##### SAX 프로그램구현 과정
 
-![xml-manipulation-sax-program](../images/xml-manipulation-sax-program.png)
+![xml-manipulation-sax-program](./images/xml-manipulation-sax-program.png)
 
 1. 발생될 이벤트에 대한 핸들러(이벤트 처리 객체)를 개발한다.
 2. SAX 객체를 생성한다.
@@ -176,7 +181,7 @@ XML 문서를 읽어 들이는 응용 프로그램 API 로서 XML 문서를 하�
 
 ##### Sample Source
 
-![xml-manipulation-sax-sample](../images/xml-manipulation-sax-sample.png)
+![xml-manipulation-sax-sample](./images/xml-manipulation-sax-sample.png)
 
 * 어떠한 기능의 핸들러를 구현할 것인가에 따라 다음 인터페이스들을 필요에 따라 상속한다.
 
@@ -231,7 +236,7 @@ void warning(SAXParseException exception) // 경고 오류 발생시 오출된�
 
 * DefaultHandler 클래스 : 필요한 메서드만을 오버라이딩 하여 구현할 수 있도록 이 인터페이스를 모두 상속하여 각 인터페이스에 정의되어 있는 abstract메서들을 오버라이딩한 DefaulatHandler 클래스를 사용한다.
 
-![xml-manipulation-sax-defaulthandler](../images/xml-manipulation-sax-defaulthandler.png)
+![xml-manipulation-sax-defaulthandler](./images/xml-manipulation-sax-defaulthandler.png)
 
 ```java
 //DefaultHandler를 상속하여 구현한 핸들러 클래스

@@ -1,8 +1,14 @@
 ---
-linkTitle: "File Upload/Download"
-weight: 32
 title: File Upload/Download 서비스
+linkTitle: "File Upload/Download"
 description: Commons FileUpload를 사용해 파일 업로드 API를 제공하며, 멀티 파일 업로드 문제와 해결 방법을 설명한다.
+url: /egovframe-runtime/foundation-layer/file-upload-download-service/
+menu:
+    depth:
+        name: File Upload/Download
+        weight: 16
+        parent: "foundation-layer"
+        identifier: "fileUpload-download"
 ---
 # File Upload/Download 서비스
 
@@ -66,7 +72,7 @@ multiple files with a single file(한단 샘플)에서 사용한 JavaScript를 �
 
 **샘플 utilappSample의 Index.jsp 실행하였을 경우 브라우저에서 실행되는 화면**
 
-![file-updown-service-sample-screenshot](../images/file-updown-service-sample-screenshot.png)
+![file-updown-service-sample-screenshot](./images/file-updown-service-sample-screenshot.png)
 
 ## 참고자료
 

@@ -1,8 +1,13 @@
 ---
-linkTitle: Delimited
-weight: 25
 title: Delimited 예제
+linkTitle: Delimited
 description: 플랫 파일의 데이터를 구분자(delimiter)로 구분하여 처리하는 기능을 예제로 제공한다. 스프링 배치에서는 플랫 파일을 처리하기 위해 FlatFileItemReader와 FlatFileItemWriter를 제공한다.
+url: /runtime-example/individual-example/batch-layer/batch-example-multi-file_delimitied/
+menu:
+    depth:
+        name: Delimited
+        weight: 21
+        parent: "batchLayer"
 ---
 # Delimited 예제
 
@@ -145,7 +150,7 @@ public abstract class EgovAbstractIoSampleTests {
 ### 결과 확인
 위의 테스트 결과로 아래의 파일이 생성되었는지를 확인한다. Job이 실행되면서 데이터가 수정된 것을 확인 할 수 있다.
 
-![delimited_data](../images/delimited_data.png)
+![delimited_data](./images/delimited_data.png)
 
 ## 참고자료
 - [FlatFileItemReader](../../egovframe-runtime/batch-layer/batch-core-item_reader.md)

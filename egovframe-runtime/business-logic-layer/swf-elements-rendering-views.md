@@ -1,8 +1,13 @@
 ---
-linkTitle: "\_\_\_- Rendering View"
-weight: 13
 title: Spring Web Flow의 뷰(View) 보여주기
+linkTitle: "Rendering View"
 description: view-state는 화면을 생성해 보여준 후, 사용자의 응답을 기다리는 역할을 하며, ID가 별도의 view 설정 없이 곧 뷰를 의미한다. 예를 들어, "enterBookingDetails"라는 ID는 해당 뷰를 나타내는 역할을 한다.
+url: /egovframe-runtime/business-logic-layer/spring-web-flow/swf-elements/swf-elements-rendering-views/
+menu:
+  depth:
+    name: Rendering View
+    weight: 3
+    parent: "swf-elements"
 ---
 # 뷰(View) 보여주기
 
@@ -26,7 +31,7 @@ view-state는 기본적으로 해당 뷰를 생성하여 보여준 후, 사용�
 
 따라서. 디렉토리 상의
 
-![dir](../images/dir.jpg)
+![dir](./images/dir.jpg)
 
 booking.xml(or booking-flow.xml) 이 존재하는 디렉토리에 있는 enterBookingDetails.jsp 이 자동으로 view로 동작한다.
 또는 절대 경로를 이용하여 명시적으로 view=”/WEB-INF/hotels/booking/enterBookingDetails.jsp” 설정할 수도 있다.

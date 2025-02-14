@@ -1,8 +1,13 @@
 ---
-linkTitle: "ItemWriter"
-weight: 9
 title: ItemWriter
+linkTitle: "ItemWriter"
 description: ItemWriter는 다양한 데이터 타입에 상관없이 한 번에 여러 항목(Chunk)을 쓰는 역할을 하며, ItemReader와 유사하지만 데이터를 쓰는 반대의 동작을 수행한다. 이를 통해 데이터를 효과적으로 처리하고 저장할 수 있다.
+url: /egovframe-runtime/batch-layer/ItemWriter/
+menu:
+    depth:
+        name: ItemWriter
+        weight: 5
+        parent: "batch-layer"
 ---
 # ItemWriter
 
@@ -26,7 +31,7 @@ write() 메소드는 ItemWriter의 필수적인 메소드이며 인자로 건넨
 ### FlatFile ItemWriter
 FlatFileItemWriter는 Resource, LineAggregator에 기본적으로 의존성을 갖으며, LineAggregator에 따라 구분자(Delimited)와 고정길이(Fixed Length) 방식으로 쓸 수 있다.
 
-![image](../images/flatfileitemwriter_process.png)
+![image](./images/flatfileitemwriter_process.png)
 
 | 구분             | 데이터 형태        | 설명                                                                                                                                                                                                                                                                                          |
 | -------------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -162,7 +167,7 @@ sqlMapClient의 참조는 아래와 같다. configLocation 속성에 iBatis를 �
 
 |스프링 FlatFileItemWriter 구조|전자정부 EgovFlatFileItemWriter 구조|
 |---|---|
-|![image](../images/flatfileitemwriter_process_except_legend.png)|![image](../images/egovflatfileitemwriter_process.png)|
+|![image](./images/flatfileitemwriter_process_except_legend.png)|![image](./images/egovflatfileitemwriter_process.png)|
 
 | 개선사항                 | 설명                        |
 | ----------------------- | --------------------------- |
@@ -271,7 +276,7 @@ BeanWrapperFieldExtractor, FormatterLineAggregator(or DelimitedLineAggregator)�
 
 |스프링 JdbcBatchItemWriter구조|전자정부 EgovJdbcBatchItemWriter 구조|
 |---|---|
-|![image](../images/jdbcbatchitemwriter.png)|![image](../images/egovjdbcbatchitemwriter.png)|
+|![image](./images/jdbcbatchitemwriter.png)|![image](./images/egovjdbcbatchitemwriter.png)|
 
 자동으로 PreparedStatement를 setter 할 경우 JdbcBatchItemWriter는 BeanPropertyItemSqlParameterSourceProvider클래스를 사용하고 EgovJdbcBatchItemWriter는 EgovMethodMapItemPreparedStatementSetter클래스를 사용한다. 설정은 아래와 같다.
 
@@ -380,7 +385,7 @@ Index Reader을 통해 읽어드린 파일을 NDX파일 설정에 따라 동적�
 배치 처리시 mybatis에서 데이터를 쓰기 위해 EgovMyBatisBatchItemWriter 서비스를 제공합니다.(mybatis MyBatisBatchItemWriter 클래스를 확장한 서비스)
 실행환경 제공 Resource Variable, Step Variable, Job Variable 서비스와 함께 사용 가능하다.
 
-![image](../images/egovmybatisbatchitemwriter_architecture.png)
+![image](./images/egovmybatisbatchitemwriter_architecture.png)
 
 #### EgovMyBatisBatchItemWriter 설정항목
 | 설정항목              | 내용                                             | 예시                      |

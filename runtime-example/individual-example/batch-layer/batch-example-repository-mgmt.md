@@ -1,8 +1,13 @@
 ---
-linkTitle: Repository
-weight: 9
 title: 저장소(Repository) 예제
+linkTitle: Repository
 description: 배치 수행 시, 데이터 처리 대상(DB,File등)에 대한 설정을 보여주는 예제이다. EgovRepositoryFunctionalTests 예제는 리소스가 DB 인 jdbcCursorIoJob 과 리소스가 File인 delimitedIoJob의 수행과정을 보여주면서, 데이터가 DB에서 DB로 File 에서 File로 처리 된다.
+url: /runtime-example/individual-example/batch-layer/batch-example-repository_mgmt/
+menu:
+    depth:
+        name: Repository
+        weight: 8
+        parent: "batchLayer"
 ---
 # 저장소(Repository) 예제
 
@@ -90,11 +95,11 @@ public class EgovRepositoryFunctionalTests {
 ### 결과 확인
 - DB의 CUSTOMER 테이블을 보면 Repository 타입이 DB인 데이터 처리 결과를 확인할 수 있다.
 
-![repository_exam_result_db](../images/repository_exam_result_db.png)
+![repository_exam_result_db](./images/repository_exam_result_db.png)
 
 - delimitedOutput.csv 파일을 보면 Repository 타입이 File인 데이터 처리 결과를 확인할 수 있다.
 
-![repository_exam_result_file](../images/repository_exam_result_file.png)
+![repository_exam_result_file](./images/repository_exam_result_file.png)
 
 ## 참고자료
 - [JobRepository](../../../egovframe-runtime/batch-layer/batch-execution-job-repository.md)

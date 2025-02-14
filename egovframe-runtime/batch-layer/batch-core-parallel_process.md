@@ -1,8 +1,13 @@
 ---
-linkTitle: 병행처리
-weight: 22
 title: 병행처리
+linkTitle: 병행처리
 description: 배치 작업에서 병렬처리를 통해 Job의 구성요소들을 여러 쓰레드로 분산 실행하여 빠르고 효율적으로 작업을 완료할 수 있다. 스프링 배치에서는 멀티쓰레드, Parallel 방식, 파티셔닝 방식 등 다양한 병렬처리 방식을 지원하며, 멀티쓰레드는 Step의 <tasklet>에 TaskExecutor를 추가해 간단히 구현할 수 있다.
+url: /egovframe-runtime/batch-layer/batch-core-parallel_process/
+menu:
+    depth:
+        name: 병행처리
+        weight: 18
+        parent: "batch-layer"
 ---
 # 병행처리
 
@@ -70,7 +75,7 @@ task-executor 속성은 각각의 흐름을 실행하는데 필요한 TaskExecut
 ✔ 각 작업 분할은 최종 종료 상태로 통합되기 전에 모두 완료하도록 구성해야 한다. 아래 그림처럼 분리된 flow들이 모두 완료해야만 다음 step으로 진행가능하다.
 
 
-![parallelstep1](../images/parallelstep1.png)
+![parallelstep1](./images/parallelstep1.png)
 
 #### 관련 예제
 
@@ -80,13 +85,13 @@ task-executor 속성은 각각의 흐름을 실행하는데 필요한 TaskExecut
 
 스프링배치는 Step의 파티셔닝 수행을 원격으로 파티셔닝하기 위하여 SPI를 제공한다. 다음 수행 패턴을 그림으로 표현했다.
 
-![partition-overview](../images/partition-overview.png)
+![partition-overview](./images/partition-overview.png)
 
 Job은 왼쪽부터 Step의 흐름대로 진행된다. Step들 중에서 하나는 마스터 라벨로 지정되어 있다. 이 그림에서 슬레이브 라벨들은 Step의 인스턴스로 식별되고, 그 결과가 마스터의 결과로 귀속된다. 슬레이브는 전형적으로 원격서비스로 이루어지며 로칼쓰레드로 전달된다. JobRepository 의 스프링배치 meta-data에서 각각의 슬레이브가 Job에서 각각 한번 수행되는 것을 보장한다.
 
 스프링배치의 SPI는 Step의 특별한 구현(PartitionStep)으로 구성되어있다. PartitionHandler와 StepExecutionSplitter 라는 두개의 인터페이스가 있고 이 역할은 아래 그림을 참고한다.
 
-![partition-flow](../images/partition-flow.png)
+![partition-flow](./images/partition-flow.png)
 
 오른쪽의 Step은 잠재적으로 여러 객체를 갖고 있고 각 역할을 수행하는 remote 슬레이브이다. Partition Step은 다음과 같이 구성되어 있다.
 

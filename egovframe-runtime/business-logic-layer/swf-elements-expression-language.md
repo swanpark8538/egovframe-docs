@@ -1,8 +1,13 @@
 ---
-linkTitle: "\_\_\_- Expression Language"
-weight: 12
 title: Web Flow에서 Expression Language (EL) 사용
+linkTitle: "Expression Language"
 description: Web Flow는 데이터 모델 및 action 실행을 위해 Unified EL 또는 OGNL을 사용하며, 주로 클라이언트 데이터 접근, 내부 데이터 구조 접근, 스프링 빈 메소드 호출 등에서 EL을 활용한다. Flow에서 EL 표현식은 eval 표현과 템플릿 표현을 통해 데이터 구조에 접근하거나 동적 뷰를 생성할 수 있다.
+url: /egovframe-runtime/business-logic-layer/spring-web-flow/swf-elements/swf-elements-expression-language/
+menu:
+  depth:
+    name: Expression Language
+    weight: 2
+    parent: "swf-elements"
 ---
 # Expression Language
 
@@ -161,7 +166,7 @@ booking처럼 범위를 명시하지 않은 경우, 범위 검색 알고리즘(s
 이 알고리즘은 request→flash→view→flow→conversation 범위의 순서로 찾게 된다. 없을 경우 EvaluationException 발생.
 아래그림은 검색되는 Scope 순서를 잘 보여주고 있다.
 
- ![scopsofswf](../images/scopsofswf.jpg)
+ ![scopsofswf](./images/scopsofswf.jpg)
 
 ## 참고자료 
 
