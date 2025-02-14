@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://swanpark8538.github.io/egovframe-docs/"
 languageCode = 'kr'
 title = '표준프레임워크 개발가이드'
 theme = 'krds-theme'
