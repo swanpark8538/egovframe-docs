@@ -21,7 +21,6 @@
 {{- $name := .Name}}
 <nav class="krds-breadcrumb-wrap" aria-label="브레드크럼">
   <ol class="breadcrumb">
-    {{/* baseURL부터 시작하도록 absURl 추가 */}}
     <li class="home">
       <a href="{{ '/' | absURL }}" class="txt">Home</a>
     </li>    
@@ -34,14 +33,12 @@
 
         {{ if $page}}
           {{if ne $url $page.RelPermalink}}
-            {{/* baseURL부터 시작하도록 absURl 추가 */}}
             <li><a href="{{ $currentPath | absURL }}" class="txt">{{ $partName }}</a></li>
-          {{ end}}
+          {{ end }}
         {{ end }}
         
         {{/*  <li>
           {{- if lt (add $index 1) (sub (len $urlParts) 1)  -}} <!-- 마지막 항목이 아니면 링크 생성 -->
-            {{/* baseURL부터 시작하도록 absURl 추가 */}}
             <a href="{{ $currentPath | absURL }}" class="txt">{{ $partName }}</a>
           {{- else -}} <!-- 마지막 항목은 링크 없이 텍스트로 표시 -->
             <span>{{ $name }}</span>
