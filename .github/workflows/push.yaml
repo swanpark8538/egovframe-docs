@@ -1,0 +1,50 @@
+name: push PR to main branch
+
+# 포크에서 PR이 오거나 업데이트될 때
+on:
+  pull_request_target:
+    # PR이 open 될 때만 실행 / reopen, synchronize의 경우 실행 X
+    types:
+      - opened
+    # PR의 base(refs/heads/…)가 다음 브랜치에 해당할 때만 실행
+    branches:
+      - main
+    # 특정 디렉토리 내에서, 그리고 Markdown 파일에 대한 변경사항만 트리거
+    paths:
+      - 'egovframe-docs/common-component/**/*.md'
+      - 'egovframe-docs/egovframe-development/**/*.md'
+      - 'egovframe-docs/egovframe-runtime/**/*.md'
+      - 'egovframe-docs/runtime-example/**/*.md'
+
+# contents write 권한 부여
+permissions:
+  contents: write
+
+jobs:
+  push:
+    runs-on: ubuntu-latest
+    steps:
+
+      # Step 1. PR 최신 커밋 체크아웃
+      - name: Checkout PR head explicitly
+        uses: actions/checkout@v3
+        with:
+          # PR 번호 기준으로 head 커밋만 가져오기
+          fetch-depth: 0
+          ref: refs/pull/${{ github.event.pull_request.number }}/head
+
+      # Step 2. 체크아웃된 커밋 정보 로그
+      # - GITHUB_REF가 refs/pull/{번호}/head 아면 head(기여자) 브랜치의 최신 커밋이 체크아웃 된 상태
+      #   -> 기여자가 보낸 코드 그 자체의 상태
+      # - GITHUB_REF가 refs/pull/{번호}/merge 이면 merge 커밋이 체크아웃 된 상태
+      #   -> 기여자가 보낸 코드가 실제로 Base에 합쳐진 후의 상태
+      - name: Show current ref & sha
+        run: |
+          echo "Current ref: $GITHUB_REF"
+          echo "Current sha: $GITHUB_SHA"
+          git log -1 --oneline
+
+      # Step 3. PR을 기여받을 브랜치(main)로 푸시
+      - name: Push PR to main branch
+        run: |
+          git push origin HEAD:main
