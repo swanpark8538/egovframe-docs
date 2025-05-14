@@ -2,7 +2,7 @@ name: Deploy Hugo site to GitHub Pages on schedule
 
 # on:
 #   schedule:
-#     - cron: '0 * * * *'  # 매 시각 0분(=1시간 마다)에 실행 (UTC 기준) / 한국 시각 = UTC+9
+#     - cron: '0 * * * *'  # 매 시각 0분에 실행 (UTC 기준) - eg. 3:00, 4:00, .../ 한국 시각 = UTC+9
 #   workflow_dispatch: # (선택) 수동 실행도 허용
 
   
