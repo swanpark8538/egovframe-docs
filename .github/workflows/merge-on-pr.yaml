@@ -11,21 +11,19 @@ on:
       - main
     # 특정 디렉토리 내에서, 그리고 Markdown 파일과 이미지 파일에 대한 변경사항만 트리거
     paths:
-      - 'egovframe-docs/common-component/**/*.md'
-      - 'egovframe-docs/egovframe-development/**/*.md'
-      - 'egovframe-docs/egovframe-runtime/**/*.md'
-      - 'egovframe-docs/runtime-example/**/*.md'
-      - 'egovframe-docs/**/*.png'
-      - 'egovframe-docs/**/*.jpg'
-      - 'egovframe-docs/**/*.jpeg'
-      - 'egovframe-docs/**/*.gif'
-      - 'egovframe-docs/**/*.tiff'
-      - 'egovframe-docs/**/*.raw'
-      - 'egovframe-docs/**/*.psd'
-      - 'egovframe-docs/**/*.pdf'
-      - 'egovframe-docs/**/*.eps'
-      - 'egovframe-docs/**/*.ai'
-      - 'egovframe-docs/**/*.svg'
+      - '!.github/**'
+      - '**.md'
+      - '**.png'
+      - '**.jpg'
+      - '**.jpeg'
+      - '**.gif'
+      - '**.tiff'
+      - '**.raw'
+      - '**.psd'
+      - '**.pdf'
+      - '**.eps'
+      - '**.ai'
+      - '**.svg'
 
 # GitHub_Token에 write 권한 부여
 permissions:
