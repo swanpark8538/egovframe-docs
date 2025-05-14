@@ -2,13 +2,13 @@ name: Merge PR with main branch
 
 # 포크에서 PR이 오거나 업데이트될 때
 on:
-  pull_request:
+  pull_request_target:
     # PR이 open 될 때만 실행 / reopen, synchronize의 경우 실행 X
     types:
       - opened
     # PR의 base(refs/heads/…)가 다음 브랜치에 해당할 때만 실행
 
-# contents write 권한 부여
+# GitHub_Token에 write 권한 부여
 permissions:
   contents: write
 
@@ -25,7 +25,7 @@ jobs:
           fetch-depth: 0
           ref: refs/pull/${{ github.event.pull_request.number }}/head
 
-      # Step 2. 체크아웃된 커밋 정보 로그
+      # Step 2. 체크아웃된 커밋 정보 로그(디버깅)
       # - GITHUB_REF가 refs/pull/{번호}/head 아면 head(기여자) 브랜치의 최신 커밋이 체크아웃 된 상태
       #   -> 기여자가 보낸 코드 그 자체의 상태
       # - GITHUB_REF가 refs/pull/{번호}/merge 이면 merge 커밋이 체크아웃 된 상태
@@ -38,9 +38,9 @@ jobs:
 
       # Step 3. PR을 main 브랜치에 Merge
       - name: Merge PR into main
-        uses: actions/github-script@v6
+        uses: actions/github-script@v7
         with:
-          github-token: ${{ secrets.PERSONAL_GITHUBAPI_ACCESS_TOKEN }} # 깃허브 actions secret
+          # github-token: ${{ secrets.PERSONAL_GITHUBAPI_ACCESS_TOKEN }} # 깃허브 actions secret
           script: |
             const { owner, repo } = context.repo;
             const pull_number = context.payload.pull_request.number;
