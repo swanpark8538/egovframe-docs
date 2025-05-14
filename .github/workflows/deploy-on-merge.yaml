@@ -1,9 +1,9 @@
-name: Deploy Hugo site to GitHub Pages
+name: Deploy Hugo site to GitHub Pages on merge
 
 on:
-  push:
+  meerge:
     branches:
-      - main  # comtribution 브랜치에 push가 있을 때 트리거
+      - main  # comtribution 브랜치에 merge가 있을 때 트리거
   workflow_dispatch:  # 수동 실행을 위한 트리거
   
 jobs:

@@ -1,4 +1,4 @@
-name: push PR to main branch
+name: Merge PR with main branch
 
 # 포크에서 PR이 오거나 업데이트될 때
 on:
@@ -7,21 +7,13 @@ on:
     types:
       - opened
     # PR의 base(refs/heads/…)가 다음 브랜치에 해당할 때만 실행
-    branches:
-      - main
-    # 특정 디렉토리 내에서, 그리고 Markdown 파일에 대한 변경사항만 트리거
-    paths:
-      - 'egovframe-docs/common-component/**/*.md'
-      - 'egovframe-docs/egovframe-development/**/*.md'
-      - 'egovframe-docs/egovframe-runtime/**/*.md'
-      - 'egovframe-docs/runtime-example/**/*.md'
 
 # contents write 권한 부여
 permissions:
   contents: write
 
 jobs:
-  push:
+  merge:
     runs-on: ubuntu-latest
     steps:
 
@@ -44,7 +36,14 @@ jobs:
           echo "Current sha: $GITHUB_SHA"
           git log -1 --oneline
 
-      # Step 3. PR을 기여받을 브랜치(main)로 푸시
-      - name: Push PR to main branch
-        run: |
-          git push origin HEAD:main
+      # Step 3. PR을 main 브랜치에 Merge
+      - name: Merge PR into main
+        uses: actions/github-script@v6
+        with:
+          script: |
+            await github.pulls.merge({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.payload.pull_request.number,
+              merge_method: 'merge'
+            })
