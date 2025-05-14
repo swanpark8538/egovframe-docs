@@ -40,10 +40,11 @@ jobs:
       - name: Merge PR into main
         uses: actions/github-script@v6
         with:
+          github-token: ${{ secrets.PERSONAL_GITHUBAPI_ACCESS_TOKEN }} # 깃허브 actions secret
           script: |
-            await github.pulls.merge({
+            await github.rest.pulls.merge({
               owner: context.repo.owner,
               repo: context.repo.repo,
               pull_number: context.payload.pull_request.number,
-              merge_method: 'merge'
+              merge_method: 'merge'  # 'squash' 또는 'rebase' 선택 가능
             })
