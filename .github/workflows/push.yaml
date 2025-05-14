@@ -2,7 +2,7 @@ name: push PR to main branch
 
 # 포크에서 PR이 오거나 업데이트될 때
 on:
-  pull_request_target:
+  pull_request:
     # PR이 open 될 때만 실행 / reopen, synchronize의 경우 실행 X
     types:
       - opened
