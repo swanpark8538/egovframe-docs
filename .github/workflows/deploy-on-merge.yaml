@@ -1,13 +1,17 @@
 name: Deploy Hugo site to GitHub Pages on merge
 
 on:
-  merge:
-    branches:
-      - main  # comtribution 브랜치에 merge가 있을 때 트리거
-  workflow_dispatch:  # 수동 실행을 위한 트리거
+  workflow_run:
+    workflows:
+      - "Merge PR with main branch"   # ← merge-on-pr.yaml 의 name 과 정확히 일치시킬 것
+    types:
+      - completed                     # 완료(completed) 이벤트만
   
 jobs:
   deploy:
+    # workflow_run 이벤트의 성공(success)만 실행
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    
     runs-on: ubuntu-latest
     steps:
     
