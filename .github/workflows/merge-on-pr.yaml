@@ -3,9 +3,10 @@ name: Merge PR with main branch
 # 포크에서 PR이 오거나 업데이트될 때
 on:
   pull_request_target:
-    # PR이 open 될 때만 실행 / reopen, synchronize의 경우 실행 X
+    # 다음의 경우에만 실행
     types:
-      - opened
+      - opened        # PR이 open 될 때
+      - synchronize   # PR에 commit 추가시
     # PR의 base(refs/heads/…)가 다음 브랜치에 해당할 때만 실행
     branches:
       - main
