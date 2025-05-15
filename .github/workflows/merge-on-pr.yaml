@@ -1,7 +1,7 @@
-# name: Merge PR with main branch
+name: Merge PR with main branch
 
 # 포크에서 PR이 오거나 업데이트될 때
-# on:
+on:
   pull_request_target:
     # 다음의 경우에만 실행
     types:
