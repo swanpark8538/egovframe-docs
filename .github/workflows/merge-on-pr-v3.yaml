@@ -42,14 +42,20 @@ jobs:
           fetch-depth: 0
           persist-credentials: true
 
-      # 2) PR 번호에 해당하는 merge-commit(refs/pull/.../merge)을 가져와서 로컬 브랜치(name = pr_merge)로 받아 놓기
+      # 2) origin/main 을 최신 상태로 업데이트
+      - name: Fetch latest origin/main
+        run: |
+          git fetch origin main
+
+
+      # 3) PR 번호에 해당하는 merge-commit(refs/pull/.../merge)을 가져와서 로컬 브랜치(name = pr_merge)로 받아 놓기
       #   - refs/pull/<N>/merge 은 GitHub가 PR head 와 base 를 미리 합친(merge) 가상의 커밋
       #   - 참고) GitHub는 PR이 열려 있는 동안 내부적으로 PR의 head 브랜치와 base 브랜치를 미리 합친 상태의 커밋을 refs/pull/<number>/merge 라는 이름으로 계속 관리
       - name: Fetch PR merge commit
         run: |
           git fetch origin pull/${{ github.event.pull_request.number }}/merge:pr_merge
 
-      # 3) merge-commit을 받아 놓은 pr_merge 브랜치를 main 브랜치로 푸시 (=자동 머지)
+      # 4) merge-commit을 받아 놓은 pr_merge 브랜치를 main 브랜치로 푸시 (=자동 머지)
       - name: Push merge commit to main
         run: |
           git push origin pr_merge:main
