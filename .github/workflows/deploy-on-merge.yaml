@@ -1,6 +1,6 @@
-# name: Deploy Hugo site to GitHub Pages on merge
+name: Deploy Hugo site to GitHub Pages on merge
 
-# on:
+on:
   workflow_run:
     workflows:
       - "Merge PR with main branch"   # ← merge-on-pr.yaml 의 name 과 정확히 일치시킬 것
