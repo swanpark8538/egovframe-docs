@@ -2,7 +2,7 @@
 title: "개인화"
 linkTitle: "개인화"
 description: "개인화"
-url: /common-component/user-support/personalization
+url: /common-component/user-support/personalization/
 menu:
   depth:
     weight: 2

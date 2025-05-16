@@ -2,7 +2,7 @@
 title: "정보제공/알림"
 linkTitle: "정보제공/알림"
 description: "정보제공/알림"
-url: /common-component/user-support/information-provided
+url: /common-component/user-support/information-provided/
 menu:
   depth:
     weight: 6

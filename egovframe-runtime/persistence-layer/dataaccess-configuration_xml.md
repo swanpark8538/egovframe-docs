@@ -38,7 +38,9 @@ menu:
 	</settings>
  
 	<typeHandlers>
-		<typeHandler handler="egovframework.rte.psl.dataaccess.typehandler.CalendarMapperTypeHandler" />
+		<typeHandler 
+		handler=
+		"egovframework.rte.psl.dataaccess.typehandler.CalendarMapperTypeHandler" />
 	</typeHandlers>
  
 	<typeAliases>
