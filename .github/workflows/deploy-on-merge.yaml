@@ -3,9 +3,9 @@ name: Deploy Hugo site to GitHub Pages on merge
 on:
   workflow_run:
     workflows:
-      - "Merge PR with main branch"   # ← merge-on-pr.yaml 의 name 과 정확히 일치시킬 것
+      - "Merge PR with main branch" # ← merge-on-pr.yaml 의 name 과 정확히 일치시킬 것
     types:
-      - completed                     # 완료(completed) 이벤트만
+      - completed # 완료(completed) 이벤트만
   
 jobs:
   deploy:
