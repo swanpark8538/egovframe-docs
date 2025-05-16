@@ -1,11 +1,11 @@
 name = 'Theme name'
 license = 'MIT'
 # license 문서 위치
-licenselink = 'https://github.com/swanpark8538/egovframe-docs'
+licenselink = 'https://github.com/eGovFramework/egovframe-docs'
 description = 'Theme description'
 
 # The home page of the theme, where the source can be found
-homepage = 'https://github.com/swanpark8538/egovframe-docs'
+homepage = 'https://github.com/eGovFramework/egovframe-docs'
 
 # If you have a running demo of the theme
 demosite = 'https://owner.github.io/repo'
