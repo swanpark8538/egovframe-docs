@@ -26,6 +26,14 @@ on:
       - '**.ai'
       - '**.svg'
 
+# 동시성 문제 대응
+concurrency:
+  # 워크플로우 파일명이 동일하고, main 브랜치에 대한 PR인 경우에만 하나의 큐를 공유하는 그룹으로 묶음
+  group: ${{ github.workflow }}-main
+  # 진행 중인 run은 취소하지 않고 새로 들어온 run만 대기(pending)시킨다.
+  # A PR의 run이 끝나는 시점에 B PR의 run이 자동으로 시작된다.
+  cancel-in-progress: false # 기본값 false
+
 # GitHub_Token에 write 권한 부여
 permissions:
   contents: write
@@ -35,27 +43,23 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-      # 1) 전체 히스토리(fetch-depth: 0)와 토큰 유지(persist-credentials: true)로 체크아웃
-      - name: Checkout repository
+      # Step 1. Base Repository의 main 브랜치를 체크아웃
+      - name: Checkout the main branch
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0
-          persist-credentials: true
+          ref: main                 # 체크아웃 대상 브랜ㅊ; : main
+          fetch-depth: 0            # 깊이 0 → 전체 커밋 히스토리 가져오기
+          persist-credentials: true # 토큰 유지 : 레포지토리를 체크아웃할 때 사용한 인증 토큰을 로컬 Git 설정(.git/config)에 그대로 남겨두므로써,
+                                    # 이후 스텝에서도 별도 인증 없이 fetch, push 등의 git 명령 실행 가능
 
-      # 2) origin/main 을 최신 상태로 업데이트
-      - name: Fetch latest origin/main
-        run: |
-          git fetch origin main
-
-
-      # 3) PR 번호에 해당하는 merge-commit(refs/pull/.../merge)을 가져와서 로컬 브랜치(name = pr_merge)로 받아 놓기
+      # Step 2. PR 번호에 해당하는 merge-commit(refs/pull/.../merge)을 가져와서 로컬 브랜치(name = pr_merge)로 받아 놓기
       #   - refs/pull/<N>/merge 은 GitHub가 PR head 와 base 를 미리 합친(merge) 가상의 커밋
       #   - 참고) GitHub는 PR이 열려 있는 동안 내부적으로 PR의 head 브랜치와 base 브랜치를 미리 합친 상태의 커밋을 refs/pull/<number>/merge 라는 이름으로 계속 관리
       - name: Fetch PR merge commit
         run: |
           git fetch origin pull/${{ github.event.pull_request.number }}/merge:pr_merge
 
-      # 4) merge-commit을 받아 놓은 pr_merge 브랜치를 main 브랜치로 푸시 (=자동 머지)
+      # Step 3. merge-commit을 받아 놓은 pr_merge 브랜치를 main 브랜치로 푸시 (=자동 머지)
       - name: Push merge commit to main
         run: |
           git push origin pr_merge:main
