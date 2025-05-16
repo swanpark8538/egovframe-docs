@@ -1,9 +1,19 @@
 name: Deploy Hugo site to GitHub Pages on schedule
 
-# on:
-#   schedule:
-#     - cron: '0 * * * *'  # 매 시각 0분에 실행 (UTC 기준) - eg. 3:00, 4:00, .../ 한국 시각 = UTC+9
-#   workflow_dispatch: # (선택) 수동 실행도 허용
+on:
+  schedule:
+    - cron: '0 * * * *'  # 매 시각 0분에 실행 (UTC 기준) - eg. 3:00, 4:00, .../ 한국 시각 = UTC+9
+  workflow_dispatch: # (선택) 수동 실행도 허용
+
+# 동시성 문제 대응
+concurrency:
+  # Base의 main 브랜치에 대한 PR인 경우에만 하나의 큐를 공유하는 그룹으로 묶음
+  #   - PR 이벤트 에서는 github.event.pull_request.base.ref 가 “main” 이 되므로 그룹 이름이 main
+  #   - 다른 이벤트(push, schedule-workflow 등)에서는 github.ref_name 이 “main” 이 되어 그룹 이름이 main
+  group: ${{ github.event.pull_request.base.ref || github.ref_name }}
+  # 진행 중인 run은 취소하지 않고 새로 들어온 run만 대기(pending)시킨다.
+  # A PR의 run이 끝나는 시점에 B PR의 run이 자동으로 시작된다.
+  cancel-in-progress: false # 기본값 false
 
 jobs:
   deploy:

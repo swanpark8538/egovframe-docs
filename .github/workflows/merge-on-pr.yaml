@@ -28,8 +28,10 @@ on:
 
 # 동시성 문제 대응
 concurrency:
-  # 워크플로우 파일명이 동일하고, main 브랜치에 대한 PR인 경우에만 하나의 큐를 공유하는 그룹으로 묶음
-  group: ${{ github.workflow }}-main
+  # Base의 main 브랜치에 대한 PR인 경우에만 하나의 큐를 공유하는 그룹으로 묶음
+  #   - PR 이벤트 에서는 github.event.pull_request.base.ref 가 “main” 이 되므로 그룹 이름이 main
+  #   - 다른 이벤트(push, schedule-workflow 등)에서는 github.ref_name 이 “main” 이 되어 그룹 이름이 main
+  group: ${{ github.event.pull_request.base.ref || github.ref_name }}
   # 진행 중인 run은 취소하지 않고 새로 들어온 run만 대기(pending)시킨다.
   # A PR의 run이 끝나는 시점에 B PR의 run이 자동으로 시작된다.
   cancel-in-progress: false # 기본값 false
@@ -55,6 +57,7 @@ jobs:
       # Step 2. PR 번호에 해당하는 merge-commit(refs/pull/.../merge)을 가져와서 로컬 브랜치(name = pr_merge)로 받아 놓기
       #   - refs/pull/<N>/merge 은 GitHub가 PR head 와 base 를 미리 합친(merge) 가상의 커밋
       #   - 참고) GitHub는 PR이 열려 있는 동안 내부적으로 PR의 head 브랜치와 base 브랜치를 미리 합친 상태의 커밋을 refs/pull/<number>/merge 라는 이름으로 계속 관리
+      #   -      refs/pull/<number>/merge는 Step1이 선행돼야 함
       - name: Fetch PR merge commit
         run: |
           git fetch origin pull/${{ github.event.pull_request.number }}/merge:pr_merge
