@@ -13946,10 +13946,11 @@ label {
 .contents{
     width:100%;
 }
-.conts-wrap > * {
-    word-break: break-all;
+@media(max-width:460px){
+    .conts-wrap > *{
+        word-break: break-all;
+    }
 }
-
 /* lnb(sideMenu) */
 .krds-side-navigation{
     flex-shrink: 0;
@@ -14014,7 +14015,7 @@ label {
     flex-direction: column;
     gap: var(--krds-pc-gap-layout-title-body-large);
     width:100%;
-  }
+}
 .h-tit{
     display: flex;
     flex-wrap: wrap;
@@ -14047,17 +14048,27 @@ label {
     margin-bottom:1rem;
 }
 
-.conts-wrap.section-link  ul {
+.conts-wrap.section-link  ul, ol {
     margin-left: 2rem;
 }
-.conts-wrap.section-link  ul > li {
+.conts-wrap.section-link  ul {
     list-style: disc;
+}
+.conts-wrap.section-link  ol {
+    list-style: decimal;
 }
 .conts-wrap.section-link > h3 + ul {
     margin-left:3rem;
 }
 .conts-wrap.section-link > h4 + ul {
     margin-left:3rem;
+}
+
+a.krds-btn.medium.text{
+    color:#0275D8;
+}
+a.krds-btn.medium.text .svg-icon.ico-go{
+    background-color:#0275D8;
 }
 
 /* table */
@@ -14085,7 +14096,6 @@ h3,h4,h5,h6 {
     width:100%;
     /* position:relative; */
 }
-
 .toolbar{
     height: 50px;
     margin-top: 1rem;
@@ -14096,10 +14106,15 @@ h3,h4,h5,h6 {
 }
 .toolbar .copy-to-clipboard-button {
     padding: var(--krds-number-3) var(--krds-number-7);
-    background-color: #272822;
-    border: 1px solid var(--krds-color-light-gray-20);
-    border-radius: var(--krds-radius-small1);
-    color: var(--krds-color-light-gray-20);
+    background-image: url(../img/egovframework/ico-clipboard.svg);
+    width:24px;
+    height:24px;
+}
+.toolbar .copy-to-clipboard-button.after{
+    padding: var(--krds-number-3) var(--krds-number-7);
+    background-image: url(../img/egovframework/ico-clipboard-after.svg);
+    width:24px;
+    height:24px;
 }
 .section-link code{
     text-wrap: wrap;
@@ -14160,9 +14175,9 @@ h3,h4,h5,h6 {
     mask-size: contain;
     -webkit-mask-image: url(../img/egovframework/ico_issue.svg);
     mask-image: url(../img/egovframework/ico_issue.svg);
-  }
+}
 
-  .svg-icon.ico_page_view {
+.svg-icon.ico_page_view {
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-position: center center;
     -webkit-mask-size: contain;
@@ -14171,9 +14186,9 @@ h3,h4,h5,h6 {
     mask-size: contain;
     -webkit-mask-image: url(../img/egovframework/ico_page_view.svg);
     mask-image: url(../img/egovframework/ico_page_view.svg);
-  }
+}
 
-  .svg-icon.ico_page_edit {
+.svg-icon.ico_page_edit {
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-position: center center;
     -webkit-mask-size: contain;
@@ -14182,7 +14197,7 @@ h3,h4,h5,h6 {
     mask-size: contain;
     -webkit-mask-image: url(../img/egovframework/ico_page_edit.svg);
     mask-image: url(../img/egovframework/ico_page_edit.svg);
-  }
+}
 
 /* 페이지 상단으로 이동*/
 .page-top-button{
@@ -14234,4 +14249,38 @@ h3,h4,h5,h6 {
     .krds-main-menu-mobile .gnb-wrap .gnb-body .gnb-menu{
         flex-direction: column;
     }
+}
+
+/*20250626 수정*/
+/*page-navigation이 contents영역을 침범하는 문제 수정 */
+@media (max-width: 1580px) {
+    .krds-in-page-navigation-type .krds-in-page-navigation-area {
+        --krds-in-page-navigation--position-right: var(--krds-contents-padding-x);
+    }
+    .krds-in-page-navigation-type > .inner:not(.in-between) {
+        padding-right: var(--krds-contents-padding-x);
+    }
+    .krds-in-page-navigation-type .krds-in-page-navigation-area {
+        position: static;
+        width: 100%;
+        transition: none;
+    }
+    .krds-in-page-navigation-type .krds-in-page-navigation-area ~ .tab-conts {
+        margin-top: var(--krds-gap-8);
+    }
+    .krds-in-page-navigation-type .krds-in-page-navigation-area .in-page-navigation-action {
+        display: none;
+    }
+}
+
+/*20250626 수정*/
+@media (max-width: 1680px) {
+    .krds-in-page-navigation-type .krds-in-page-navigation-area {
+        --krds-in-page-navigation--position-right: calc((100% - 1580px) / 2 + var(--krds-contents-padding-x));
+    }
+}
+
+/* 250626 수정 krds reset 제거 */
+em{
+    font-style: italic;
 }

@@ -53,7 +53,7 @@ Change Management<span class=sr-only>열기</span></button><div class=lnb-submen
 <a class="krds-btn medium text" href=/egovframe-docs/egovframe-development/test-tool/test-automation/test-reporting/#html-%eb%a6%ac%ed%8f%ac%ed%8a%b8-%ec%83%9d%ec%84%b1-%ec%83%98%ed%94%8c>HTML 리포트 생성 샘플<i class="svg-icon ico-go"></i></a>
 참조</li><li>이클립스에서 리포트 생성 :
 <a class="krds-btn medium text" href=/egovframe-docs/egovframe-development/test-tool/test-tool-ref/run-ant-on-eclipse/>이클립스에서 Ant 실행하기<i class="svg-icon ico-go"></i></a>
-를 참고하여 해당 target을 실행하고, Console View에서 <strong>BUILD SUCCESSFUL</strong>을 확인한다.</li><li>HTML 리포트 확인 : build.xml의 todir="${testhtml.dir}"()에서 설정하며, 현재 설정대로라면 testhtml.dir에 설정된 디렉토리에 index.html을 더블클릭하여 확인할 수 있다. 그 모양은
+를 참고하여 해당 target을 실행하고, Console View에서 <strong>BUILD SUCCESSFUL</strong>을 확인한다.</li><li>HTML 리포트 확인 : build.xml의 todir="${testhtml.dir}"(<report format=frames todir=${testhtml.dir}>)에서 설정하며, 현재 설정대로라면 testhtml.dir에 설정된 디렉토리에 index.html을 더블클릭하여 확인할 수 있다. 그 모양은
 <a class="krds-btn medium text" href=/egovframe-docs/egovframe-development/test-tool/test-tool-ref/ant-test-report/>Ant에서 생성한 테스트 결과 HTML 리포트<i class="svg-icon ico-go"></i></a>
 와 같다.</li></ol><h3 class=sec-tit id=엑셀-리포트-생성-방법>엑셀 리포트 생성 방법</h3><p>테스트 결과를 엑셀 형식으로 리포트하는 기능은 오픈소스가 아닌 전자정부 개발프레임워크 개발환경에서 추가 개발한 내용이다.
 해당 기능에 대해 자세한 내용은
